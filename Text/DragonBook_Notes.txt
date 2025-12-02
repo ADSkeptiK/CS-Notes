@@ -1,0 +1,25 @@
+******* Java language processors combine compilation and interpretation. A Java source program may first be compiled into an intermediate form called bytecodes. The bytecodes are then interpreted by
+a virtual machine. A benefit of this arrangement is that bytecodes compiled on
+one machine can be interpreted on another
+machine, perhaps across a network.3*******
+
+
+
+*******After the preprocessed source file is fed to the compiler it might output an assembly, because assembly is easier to produce as output and easier to debug.3
+********
+
+
+
+*******The analysis part breaks up the source program into constituent pieces and imposes a grammatical structure on them. It then uses this structure to create an intermediate representation of the source program. If the analysis part
+detects that the source program is either syntactically ill formed or semantically unsound, then it must provide informative messages, so the user can take corrective action.Synthesis part constructs the desired target program from the intermediate representation and the information in the symbol table. 4*******
+
+******* Steps of Compilation:
+First the Lexical analyzer reads streams of characters and groups them into meaningful sequences called lexemes.
+Then it produces an output token of the form (token-name,attribute value) and passes it to syntax analysis.Token name is an abstract symbol used during syntax analysis. Attribute value points to an entry in the symbol table for this token.5*******
+
+******* 
+During Syntax Analysis or Parsing phase,the parser uses the first components of the tokens produced by the lexical analyzer to make a tree like intermediate repreasentation.8*******
+
+******* Semantic analyzer fixes the implicit type conversions ( coercions).8*******
+
+9.

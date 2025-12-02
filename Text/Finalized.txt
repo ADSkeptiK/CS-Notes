@@ -1,0 +1,21 @@
+Programming Language Terms:
+
+Functions:
+
+
+Windows programming  
+
+Chapter 0: Preparations for C++ programming
+
+C++ is a compiled general purpose programming language. Meaning in order to write functional programs in this language for a hardware we need:
+
+1) Its Compiler for that specific hardware, which is an app that takes the program in  Compiled programming language and translates it into an object file.
+
+2) A Linker which is the app that links the generated object file to the object file of the libraries,generating an executable app that could be run in the process.
+
+3) A code editor for editing, saving and possibly changing declarations in our program.
+
+All of these are present in IDEs for major OS s, the installation of which is pretty simple but will be explained.
+
+
+Every program ultimately could be summarized into a single routine, the beginning of which is called the entry point(The literal start of the program).Entry point is defined differently based on programming languages and in C++ it's the main function which is the THE summarized single routine we spoke of in the beginning.

@@ -1,0 +1,108 @@
+getchar (): Inputs a single character.17
+
+putchar(): Outputs single character.17
+
+' \xhh': Used to repreasent character of 
+the hexadecimal digits (h)s.37
+
+' \000 ': Used to repreasent character of the octal value (0)s.37
+
+strlen(): returns the length of its character string argument  excluding the terminal '\0' which is  declared in the <string.h> .39
+
+enum name {IDENTIFIER1 = 'sad', IDENTIFER = 2, IDENTIFIER3}; :The values of the identifiers within the  enumaration are started from 0 and incremented by one from left to right by default, unless they're explicitly specified.39
+(type-name) expression: The expression is converted to the named type by the conversion rules above. 45
+
+&: The bitwise AND operator is often used to mask off some set of bits 
+for example:
+n= n& 0177 sets to zero all but the low order 7 bits  of n.48
+
+| : The bitwise OR operator is used to turn bits on for example:
+x = x | SET+ON.48
+
+<< : Shift operators perform left and right shifts  of their  left operand by the number of bit positions given by the right operand, which must be positive. e.g : x << shifts the value of x left by  2 positions. Filling the vacted positions by 0.49
+
+>>: Right shifting signed quantity will fill the vacted bits with zero while right shifting a signed one will fill with signed bits("arithmetic shift") on some macgines and with 0 bits("logical shift") on others.49
+
+~: The unary complement operator yields the one's complement of an integer, that is 
+it converts each 1-bit into a 0-bit and vice versa.49
+
+
+
+if (expression)
+    statement 1
+else
+    statement 2 :  The else part is optional
+    and associated with the closest
+     previous else-less if.56
+
+
+switch (expression) 
+{
+   case const-expr: statements
+   case const-expr: statements
+   default: statements
+} : The default case is executed if none of the other cases  match, no action at all takes place.58
+
+break: It can be used to force  an immediate exit from while,for and do loops.59
+
+, : This operator most often finds use in the for statement. A pair of expressions separated by a comma is evaluated left to right and the type and value of the result are the type and value of the right operand.62
+
+break: Causes the innermost enclosing loop or switch  to be exited immediately.64
+
+continue: It causes the next loop iteration.65
+
+goto: Is used to branch to labels.
+It's mostly used to break out of nested structures and loops.The scope of a label is the entire function.66
+static: When used with external variables,it limits their scope to the compiling source file and  when used with internal variables
+makes them remain in existence(retain their value) and when used with functions its name is invisible outside of the file it is declared. 83
+
+extern: Extern declaration is used to indicate that that it is the global variable that is being used in the  function or file scope that the declaration  is made in.
+
+Register : A register declaration advises the compiler that the variable in question will be heavily used. The idea is that register variables are to be put in machine registers which may result in smaller and faster programs but compilers are free to ignore the advice. It's not possible to take the address of a register variable.83-84
+
+#define NAME Replacement text:
+It calls for a macro substitution of the simplest kind - subsequent occurences of the token name will be replaced by the replacement text. The name in a #define has the same form as a variable name; the replacement text is arbitrary. Normally the replecemant text is the rest of the line , but a long definiton may be continued into several lines by placing a \ at the end of each line to be continued. The scope of a nam defined  is from its point of definition to the end of the surce file being compiled.A definition may use previous definitions. Substitutions are made only for tokens , and do not take place between quoted strings.89
+
+#define NAME(A,B) ((A) > (B) ? (A) : (B)) :
+Although it looks like a function call , a use of max expands into in-line code. Each occurrence of a formal parameter will be replaced by the corresponding actual argument. So long as the arguments are treated consistently this macro will serve for any data type. Oh and just dont write macros arguments as expressions, as they will be regarded LITERALLY .90
+
+
+
+#undef : Used to undefine a name.90
+
+
+
+#if : Evaluates a constant integer expression (which may not include sizeof,casts or enum constants) If the expression is non zero , subsequent lines until an #elif or #endif or #else are included. 91
+
+#elif : It's like else if but preprocessor.91
+
+#endif : ends an if.91
+
+#ifndef: if not defined.92
+
+#ifdef : if defined.92
+
+Chappter 5 : Pointers and Arrays
+
+
+
+&: This unary operator gives the address of an object.It only applies to objects in memory : variables and array elements.It cannot be applied to expressions , cpnstants or register variables.94
+
+int argc, char* argv[]: In environments that support C we can pass command-line argymenrs or parameters to a program at the beginning  of its execution through first running the program from that environment  by typing its name (As the first input  is always recorded as the first element of argv pointer array by convention
+and then in addition to that add our commands.114
+
+
+struct name { varType name; vartype name;}; : We declare a struct like this.128
+
+pointertostructure -> member of structure:
+The said member within the dereferenced
+pointer to structure.131
+
+sizeof(): Yields the size of obj in bytes.135
+
+
+(casttype *) pointername: Used to cast pointer [self learned].
+
+typedef type ReplacementText: Makes the replacement text usable in the stead of the type.146
+
+union tag{}obj: How we define a union.Which are basically structures big enough to hold any of the  the several types. It will be large enough to hold the largest of the types within it.147

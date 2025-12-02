@@ -1,0 +1,3 @@
+using: Each using directive identifies a namespace containing a class that a C# app should be able to use.108
+
+class: Declares a class. Every C# app consists of at least 1 class.109

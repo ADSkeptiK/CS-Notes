@@ -1,0 +1,22 @@
+******* CPU contains the arithmatic and logic unit for manipulating data, a number of registers for storing data and control circuits for fetching and executing instructions .2 *******
+
+******* The memory of computer contains storage for instructions and data which is why it's called random access memory.Because CPU can access any location memory at random. 2 *******
+
+******* The IOP contains electronic circuits for communicating and controlling the transfer of information. The IOP include keyboards,terminals, magnetic disk driver and etc.3*******
+
+******* The differences between computer architecture, design and organization.3*******
+******* Von  Neumann vs Harvard architecture.Basically in von neumann's architecture all the data and instructions should be held on the same memory area and instructions are carried out sequentially. In Harvard arch they have separate memory .3-4*******
+
+******* Electrical  signals such as voltages exist throughput  the computer  in either one of the two recognizable states.
+The two states represent  a binary variable that can be equal to 1 or 0 .5 *******
+
+******* OR-invert and invert-AND are both (NOR). AND-invert and invert-OR are both NAND. 10*******
+
+
+
+
+
+******* Two methods of simplifying  Boolean algebraic expressions are the map method and the tabular method. The map method is used for functions upto six variables to manipulate functions of a large number of variables the tabular method is used  which is also known as Quine McCluskey. The map method is also know as Karnaugh. 13*******
+
+
+******* We repreasent the minterms that produce 1 in their decimal form.13*******

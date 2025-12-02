@@ -1,0 +1,4 @@
+Signals :Discrete elements of information are repreasented in a Digital system  by physical quantities called signałs.
+Electrical signals such as voltages and currents are the most common.18
+
+Coefficient: What's  multiplied.20

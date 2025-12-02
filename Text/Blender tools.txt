@@ -1,0 +1,23 @@
+Proportional Editing: A tool at the top right in the Edit mode allowing us to move a radius of vertices.
+
+
+
+Toggle X Ray : This tool in edit mode at yhe top wheel allows us to access vertices through the mesh.
+
+Modifiers:
+
+Subdivision Surface: Subdivides surfaces.
+
+Shade Smooth: Makes surface smooth.
+
+Solidify: Gives thikness to the mesh.
+
+snap: The magnet symb on top in edit mode.
+
+Face Snap: Snaps vertex to the element.
+
+Face Project: Snaps the entire area's vertices.
+
+
+
+Solidify modifier > Edge Data: Used to stick the outerie edge.

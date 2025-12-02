@@ -1,0 +1,105 @@
+******* OpenGL is an interface that application can use to access and control the graphics subsystem of its device.24B,46PDF ********
+
+******* Through a combination of pipelining abd parellel ism efficiency is achieved.25B,46*******
+
+******* Game engines tend to take the higher abstraction approach while consoles the opposite.25B,46*******
+
+
+
+
+
+
+
+******* Current GPUs consist of large numbers of programmable processsors called shader cores that run mini programs
+called shaders.Each core has a relatively low throughput processing a single instruction of the shader in one or more clock cycles and normally lacking advanced feature such as out of order execution ,branch prediction and superscalar issues.Each GPU might contain anywhere from a fewtens to a few thousands of these cores, and together they can perform an immense
+amount of work. The graphics system is broken into a number of stages, each represented either by a shader or by a fixed-function, possibly configurable processing block. Figure 1.1 shows a simplified schematic of the graphics pipeline.26B,46-47PDF*******
+******* OpenGl is implemented as GPU drivers , firmware or other system softwares.27B,47*******
+
+******* The fundamental unit of programming in open gl is known as the primitive.32B,51PDF*******
+
+*******OpenGL supports many types of primitives but  the basic  but the three basic renderable primitive types are points, lines, and triangles. Everything you see rendered on the screen is a collection of (perhaps cleverly colored) points, lines, and triangles. Applications will normallybreak complex surfaces into a very large number of triangles and send them to OpenGL, where they are rendered using a hardware accelerator called a rasterizer. Triangles are, relatively speaking, pretty easy to draw. As polygons, triangles are always convex,
+so filling rules are easy to devise and
+follow. Concave polygons can always be broken down into two or more triangles, so hardware natively supports rendering triangles directly and relies on other subsystems  to break complex geometry into triangles.32B,51-52PDF********
+
+******* In order to run Open GL applications we first need to include the sb7.h header in a source file in a project that is using the CMake project settings 
+and then drive a class from the sb7::application class, then proceed to implement the run method in it.34*******
+
+******* The shader shader stages of OpenGL are vertex shaders ,tessellation control and evaluation shaders,geometry shaders,fragment shaders and compute shaders.38*******
+
+******* Vertex shader determines the point,fragment shader determines pixel color.39*******
+
+******* In fragment shaders, the value of the output (out) variables will be sent to the window or screen.39*******
+
+*********** SUMMARY :In order to write and depict shaders, we have to first (in order) at least
+Create Vertex shader,Fragment shader and Program Obj holders(Typed GLuint)
+Create Vertex Shader and Fragment Shader Source Code holders (Typed static const GLchar* with \n terminated snippets of concatinated strings where the Shader code is written in GLSL)
+Initialize shader objects with an empty object of their kind using glCreateShader(GL_SHADERTYPE_SHADER)s and initialize Program object with an empty obj using glCreateProgram()s return value.
+Copy the shader code from shader source code holder accordingly inside the shader obj using the glShaderSource().
+Compile the shader objects using glCompileShader.
+Attach the compiled shader to the program obj using glAttachShader()
+Link the Shader Objs to the program Obj using glLinkProgram().
+Using glDeleteShader() to delete the shader objs.
+
+39-42*********************
+
+
+**********SELF LEARNED: gl_Position repreasents the current location of
+vertex,it COULD BE influenced/changed thru both Vertex shader AND INPUTS.************
+
+
+******* GLSL includes a special input to vertex shader called gl_VertexID which is the index of the vertex that is being processed at the time.The gl_VertexID input starts from counting from the first parameter of glDrawArrays() and counts upward one vertex at a time for count vertices.(IT DOES NOT ACTUALLY PROCESS VERTEXES ONE AT A TIME BUT RATHER DETERMINES THE NUMBER OF VERTEXES IT HAS TO PROCESS IN PARELLEL AND DOES IT.)
+MORE INFO ON gl_VertexID and glDrawArrays in the keywords part.
+47*******
+
+******* In glDrawArrays() the count gives the number of vertexes (the number of times the vertex shader has to happen(We dont call it loop as it happens in parellel)).VertexID holds the index of vertex currently being
+
+******* Vertex shader is the first programmable stage of  OpenGL pipeline.
+Before the vertex shader runs, a fixed-function stage known as vertex fetching or vetex pulling is run which provides inputs to the vertex shader.49********
+
+
+******** SUMMARY:
+IN OPEN GL PIPELINE :
+FIRST A FIXED FUNCTIONPROCESS CALLED VERTEX FETCH/VERTEX PULLING HAPPENS THAT AUTOMATICALLY PROVIDES INPUTS TO THE VERTEX SHADER.
+1) SHADERS TAKE INPUTS THRU IN VARS AND GIVE OUTPUTS THRU OUT VARS.
+
+2) VERTEX SHADER IS A SHADER MEANING IT IS LIKE THAT AS WELL BUT SINCE IT HAS A MANDATORY FIXED FUNCTION VERTEX FETCH STAGE BEFORE IT SINCE ITS THE ONLY MANDATORY STAGE, THE VALUE OF ITS IN AND OUT VARS ARE WOULD BE AUTOMATICALLY FILLED BY THAT STAGE.WE CAN TELL THE VERTEX FETCH STAGE HOW TO FILL THE VERTEX ATTRIBUTE THRU THE USE OF glVertexAttrib*() functions.68PDF ********
+
+
+
+******* In GLSL themechanism for getting data in and out of shaders is to declare global variables with the in and out storage qualifiers.49*******
+
+******* At the start of the OpenGL pipeline, we use the in keyword to bring inputs into the vertex shader. Between stages, in and out can be used to form conduits from shader to shader and pass data between them.49*******
+
+******** Declaring a var as in marks the variable as an input to the vertex shader, which means that it is essentially an input to the OpenGL graphics pipeline.  It is automatically filled in by the fixed-function vertex fetch stage. The variable becomes known as a vertex attribute.49*******
+
+
+
+********** IMPORTANT SUMMARY TILL NOW:
+Vertex shader can take inputs in the form of in defined variables, which will be automatically filled by the fixed function vertex fetch stage.
+NOW the vertex fetch stage could be modified thru its functions whci generally start with the prefix glVertexAttrib.
+**********
+
+******** Vertex fetch stage will automatically fill the variable but the way it does it could be customized thru vertex attribute functions which follow the form glVertexAttrib*() (*=means any name)
+.Each time we call one of the glVertexAttrib*() functions (of which there are many), it will update the value of the vertex attribute that is passed to the vertex shader which can be used to animate stuff.69pdf*******
+
+******* UPDATED SUMMARY:
+The glDrawArrays() basically generates IDs accordingly to the its arguments and each ID goes thru the very same vertex shader IN PARELLEL!!!!!!!!!!!!!!!  ALSO, the glVertexAttrib4fv ONLY assings a constant 4 elemented array to a vertex attribute at the given location of its arg.70pdf **********
+
+**********************************Updated summary:
+
+Open GL Context generates a number of IDs  and treats them respectively to glDrawArrays() arguments when it is called. Now the actual value for each of these IDs/Each of these vertices is to be taken/binded thru first calling glVertexAttrib* functions from the context  and then binding them as input variables/vertex attributes thru the location variable.
+We pass variables to the vertex shader and thru that to the next stages by  defining them as out, and then defining them as in with the first name in the next stage.71pdf**********************************
+
+******* Structures are used to group together variables.72pdf*******
+
+
+*******Interface blocks are for moving data and cannot be used for grouping inputs FOR vertex shader or outputs from fragment shader.73pdf******* 
+
+
+
+
+******* The tessellation stage breaks high order surfaces called patches made out of control points into primitives.It's started by first using glPatchParameteri() in context before the draw calls to set the number of input control points per batch(BY DEFAULT its 3 and so if you want it to be 3 you can ommit this functions) and then setting the number of output control points(control point) produced per batch this time within the tessellation shader as a layout declaration like below:
+layout (vertices = 3) out;
+.74*******
+
+******  The output tessellation factors are written to the gl_TessLevelInner and gl_TessLevelOuter built-in variables while other data is passed down within user-defined out variables or the  special gl_out array.74******

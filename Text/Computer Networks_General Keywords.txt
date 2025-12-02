@@ -1,0 +1,28 @@
+computer networks: a large number of separate but interconnected computers.2
+
+Internet:network of networks.2
+
+distributed system:a collection of independent computers appears to its users as a single coherent system.A well-known example of a distributed system is the World Wide Web.It runs on top of the Internet and presents a model in which everything looks like a document (Web page).2
+
+servers: powerful computers.4
+
+VoIP: Telephone calls between employees may be carried by the computer network instead of by the phone company. This technology is called IP telephony or Voice over IP (VoIP) when Internet technology is used.5
+
+Peer-to-peer:  In this form, individuals who form a loose group can communicate with others in the group, as shown in Fig. 1-3. Every person can, in principle, communicate with one or more other people; there is no fixed division into clients and servers. 7
+
+
+
+RFID (Radio Frequency IDentification) :
+RFID tags are passive (i.e., have no battery) chipsthe size of stamps and they can already be affixed to books, passports, pets, credit cards, and other items in the home and out. This lets RFID readers locate and communicate with the items over a distance of up to several meters, depending on the kind of RFID. Originally, RFID was commercialized to replace barcodes. It has not succeeded yet because barcodes are free and RFID tags cost a few cents. Of course, RFID tags offer much more and their price is rapidly declining. They may turn the real world into the Internet of things (ITU, 2005).10
+
+ Cellular networks: These are networks operated by the telephone companies are one familiar kind of wireless network that blankets us with coverage for mobile phones.11
+
+Wireless hotspots: They are based on the 802.11 standard are another kind of wireless network for mobile computers. They have sprung up everywhere that people go, resulting in a patchwork of coverage at cafes, hotels, airports, schools, trains and planes.11
+
+DMCA takedown notices:.14
+
+Cookies: small files that Web browsers store on users’ computers allow  companies to track users’ activities in cyberspace and may also allow credit card numbers, social security numbers, and other confidential information to leak all over the Internet (Berghel, 2001). 15
+
+Phishing message: They masquerade as originating from a trustworthy party, for example, your bank, to try to trick you into revealing sensitive information, for example, credit card numbers. Identity theft is becoming a serious problem as thieves collect enough information about a victim to obtain credit cards and other documents in the victim’s name.16
+
+17

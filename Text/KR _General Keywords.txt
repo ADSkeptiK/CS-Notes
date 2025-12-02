@@ -1,0 +1,27 @@
+Declaration: Announces the properties of variables.9
+
+Text Stream: Sequence of characters divided into lines each line consists of one or more character followed by a newline character.16
+
+Symbolic Constant: Is a way to systemically change the magic number.15
+
+Constant Expression: Is an expression that involves only constants. Such expressions may be evaluated during compilation rather than runtime and accordingly may be used in any place that a constants can occur.38
+
+String Constant: Is a sequence of zero or more characters surrounded by double quotes as in "Sdapdik"  or "" the quotes are not a part of string but seerve only to delimit it. The same escape sequences used in character constants can be concatenated at compile time.38
+
+Enumeration Constant: An enumeration is a list of constant integer values. The values of the identifiers within the  enumaration are started from 0 and incremented by one from left to right by default, unless they're explicitly specified.39
+
+Declaration: Specifies a type and contains a list of one or more variables of that type.40
+
+Typecast: The precise meaning of a cast 
+is as if the  expression were assigned to a variable of the specified type, which is then used in place of the whole construction.45
+Compound Statement / block: Statements put /grouped together  and regarded as one by brackets.55
+
+External Linkage: All references to them by the same name, even from functions compiled separately are references to the same thing.The standard calls this property external linkage.73 
+
+Preprocessor: C provides certain language facilities by means of a preprocessor, which is conceptually a separate first step in compilation. 88
+
+Pointer: A pointer is a variable that contains the address of a variable.They are much used in C , partly because they are sometimes the only way to express  a computation and partly because they usually lead to more compact and efficient
+code than can be obtained in other
+ways.93
+
+Structure: Is a collection of variables possibly of different types under a single name for convenient handling.127

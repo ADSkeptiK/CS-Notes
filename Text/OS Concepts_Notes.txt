@@ -1,0 +1,23 @@
+******* A modern general-purpose computer system consists of one or more CPUs and
+a number of device controllers connected through a common bus that provides
+access between components and shared memory (Figure 1.2). Each device
+controller is in charge of a specific type of device (for example, a disk drive,
+audio device, or graphics display). Depending on the controller, more than one
+device may be attached. For instance, one system USB port can connect to a
+USB hub, to which several devices can connect. A device controller maintains
+some local buffer storage and a set of special-purpose registers. The device
+controller is responsible for moving the data between the peripheral devices
+that it controls and its local buffer storage.Typically, operating systems have a device driver for each device controller. This device driver understands the device controller and provides the rest of the operating system with a uniform interface to the device. The CPU and the device controllers can execute in parallel, competing for memory cycles. To ensure orderly access to the shared memory, a memory controller synchronizes access to the memory.7 *******
+
+******* When the CPU is interrupted, it stops what it is doing and immediately
+transfers execution to a fixed location. The
+fixed location usually contains the starting
+address where the service routine for the
+interrupt is located. The interrupt service
+routine executes; on completion, the CPU
+resumes the interrupted computation.8
+*******
+
+******* Since interrupts must be handled quickly a table of pointers to the interrupt routines can be used which is  stored in the low memory. The interrupt vector is then indexed by a unique number given with the interrupt request.9*********
+
+******* CPU hardware has an interrupt request wired that it senses after every instruction. When it senses that controller has asserted a signal it uses the interrupt number as index as it jumps to the interrupt vector and starts execution  at the address associated with that index. It then saves any state it will be changing and after performing the necessary  tasks does a state restore followed by the execution of a return_from_interrupt  instruction as it returns CPU to the  exectution state prior to interrupt.9******

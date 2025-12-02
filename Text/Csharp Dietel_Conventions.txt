@@ -1,0 +1,8 @@
+By convention, all class names begin with a capital letter and capitalize the first letter of each word they include (e.g., SampleClassName).109
+
+
+
+
+
+
+By convention, a file that contains a single class should have a name that’s identical to the class name (plus the .cs extension) in both spelling and capitalization. This makes it easy to identify which file contains the class’s declaration.110

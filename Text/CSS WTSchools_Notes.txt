@@ -1,0 +1,223 @@
+******* To select elements with a specific class, write a period (.) character, followed by the class name. *******
+
+
+*******You can also specify that only specific HTML elements should be affected by a class. 
+In this example only <p> elements with class="center" will be red and center-aligned: 
+p.center   {   text-align :   center ;   color :   red ; } *******
+
+
+******* In this example the <p> element will be styled according to class="center" and to class="large":  *******
+
+
+******** To group selectors, separate each selector with a comma.
+
+In this example we have grouped the selectors from the code above: 
+
+h1, h2, p   {   text-align :   center ;   color :   red ; } *******
+
+
+******* Note:  Do not add a space between the property value (20) and the unit (px)********
+
+TILL THE END OF HYPERLINKS.
+
+
+********  By default background-color selector repeats on x and y axis for eternity.********
+
+******** If the border-style  property has four values:
+border-style: dotted solid double dashed;top border is dottedright border is solidbottom border is doubleleft border is dashedIf the
+  border-style  property has three values:
+border-style: dotted solid double;top border is dottedright and left borders are solidbottom border is doubleIf the border-style  property has two values:
+border-style: dotted solid;top and bottom borders are dottedright and left borders are solidIf the
+border-style  property has one value:
+border-style: dotted;all four borders are dotted.********
+
+******* Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+This does not happen on left and right margins! Only top and bottom margins!*******
+
+ 
+
+******* The CSS width  property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (the box model). So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result.********
+
+
+******** BOX SIZING:The CSS width  property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (the box model).So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result.To keep the width at 300px, no matter the amount of padding, you can use the   box-sizing  property. This causes the element to maintain its actual width; if you increase the padding, the available content space will decrease.*******
+
+
+
+******* height  and   width  properties do not include padding, borders, or margins! They set the height/width of the area inside the padding, border, and margin of the element! *******
+
+
+******* The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.*******
+
+*******Content  - The content of the box, where text and images appear
+Padding  - Clears an area around the content. The padding is transparent
+Border  - A border that goes around the padding and content
+Margin  - Clears an area outside the border. The margin is transparent*******
+
+********Important:  When you set the width and height properties of an element with CSS, you just set the width and height of the   content area. To calculate the total width and height of an element, you must also include the padding and borders. *******
+
+*******   The margin property also affects the total space that the box will take up on the page, but the margin is not included in the actual size of the box. The box's total width and height stops at the border. *******
+
+******* An outline is a line drawn outside the element's border.outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.*******
+
+
+******* The following list are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)Verdana (sans-serif)Tahoma (sans-serif)Trebuchet MS (sans-serif)Times New Roman (serif)Georgia (serif)Garamond (serif)Courier New (monospace)Brush Script MT (cursive)
+*******
+
+******* font-style is mostly used to specify italic text.*******
+
+******* The font-size value can be an absolute, or relative size.
+Absolute size:
+Sets the text to a specified sizeDoes not allow a user to change the text size in all browsers (bad for accessibility reasons)Absolute size is useful when the physical size of the output is known.
+Relative size:
+Sets the size relative to surrounding elementsAllows a user to
+change the text size in browsers.******
+
+
+*******Note:  If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em). *******
+
+******** There is still a problem with older versions of Internet Explorer. The text becomes larger than it should when made larger, and smaller than it should when made smaller. the solution is to set a default font-size in percent for the <body> element usually 100%.*******
+
+******** We can link google fonts thru a HTML link tag.
+<link   rel ="stylesheet"   href ="https://fonts.googleapis.com/css?family=Sofia" >  we can also  add multiple fonts after the family part but we'd have to separate them by | the same way we do it for effects.*******
+
+*******Google has also enabled different font effects that you can use. First add effect=effectname  to the Google API, then add a special class name to the element that is going to use the special effect. The class name always starts with font-effect-and ends with the effectname.*******
+
+
+
+
+
+
+
+******* Font Pairing Rules
+Here are some basic rules to create great font pairings:
+1. Complement
+It is always safe to find font pairings that complement one another.A great font combination should harmonize, without being too similar or too different.
+
+2. Use Font Superfamilies
+A font superfamily is a set of fonts designed to work well together. So, using different fonts within the same superfamily is safe.For example, the Lucida superfamily contains the following fonts: Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida Math.
+3. Contrast is King
+Two fonts that are too similar will often conflict. However, contrasts, done the right way, brings out the best in each font.
+Example: Combining serif with sans serif is a well known combination.A strong superfamily includes both serif and sans serif variations of the same font (e.g. Lucida and Lucida Sans).
+4. Choose Only One Boss
+One font should be the boss. This establishes a hierarchy for the fonts on your page. This can be achieved by varying the size, weight and color.*******
+
+
+
+
+
+*******
+Popular font pairings:
+Georgia and Verdana
+Helvetica and Garamond
+Merriweather and Open Sans
+Ubuntu and Lora
+Abril Fatface and Poppins
+Cinzel and Fauna One
+Fjalla One and Libre Baskerville
+Space Mono and Muli
+Spectral and Rubik
+Oswald and Noto Sans
+*******
+
+*******
+When setting the style for several link states, there are some order rules: a:hover MUST come after a:link and a:visiteda:active MUST come after a:hover *******
+
+*******Setting the display property of an element only changes   how the element is displayed, NOT what kind of element it is. So, an inline element with   display: block;  is not allowed to have other block elements inside it. *******
+
+******* We hide an element as if it's not there by setting display attribute to none while by setting the  display selector to hidden the empty space of it will be left visible*******
+
+******* Combinators:
+
+*space* : descendants.
+>:child elements.
++: adjacent selector used to select any element right after the said one.*******
+
+******* A CSS pseudo-element is used to style specified parts of an element. *******
+
+******* The   ::first-line  pseudo-element is used to add a special style to the first line of a text. *******
+
+******* Note:  The ::first-line  pseudo-element can only be applied to block-level elements.*******
+
+******* Till the end of navigation bar*******
+
+******* An image sprite is a collection of images put into a single image.
+
+A web page with many images can take a long time to load and generates multiple server requests.
+
+Using image sprites will reduce the number of server requests and save bandwidth.We define sprites like the normal background image (using url tag) followed by fromleftpx fromtoppx *******
+
+
+
+
+******* There are four categories which define the specificity level of a selector:
+
+Inline styles  - Example: <h1 style="color: pink;">IDs  - Example: #navbarClasses, pseudo-classes, attribute selectors  - Example: .test, :hover, [href]Elements and pseudo-elements  - Example: h1, ::before.*******
+
+*******
+CSS [attribute] Selector
+The [attribute]  selector is used to select elements with a specified attribute.
+
+CSS [attribute="value"] Selector
+The [attribute="value"]  selector is used to select elements with a specified attribute and value.
+
+CSS [attribute~="value"] Selector
+The [attribute~="value"]  selector is used to select elements with an attribute value containing a specified word.
+
+CSS [attribute|="value"] Selector
+The [attribute|="value"]  selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).
+
+Note:  The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text".
+
+
+
+CSS [attribute^="value"] Selector
+The [attribute^="value"]  selector is used to select elements with the specified attribute, whose value starts with the specified value. The following example selects all elements with a class attribute value that starts with "top":
+Note:  The value does not have to be a whole word!
+
+
+
+
+CSS [attribute$="value"] Selector
+The [attribute$="value"]  selector is used to select elements whose attribute value ends with a specified value.The following example selects all elements with a class attribute value that ends with "test":
+Note:  The value does not have to be a whole word!  
+
+
+
+
+
+CSS [attribute*="value"] Selector
+The [attribute*="value"]  selector is used to select elements whose attribute value contains a specified value. The following example selects all elements with a class attribute value that contains "te":
+Note:  The value does not have to be a whole word!  *******
+
+
+
+
+
+******* 
+Absolute Lengths
+The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+
+Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.
+
+
+
+UnitDescriptioncmcentimetersTry itmmmillimetersTry itininches (1in = 96px = 2.54cm)Try itpx *pixels (1px = 1/96th of 1in)Try itptpoints (1pt = 1/72 of 1in)Try itpcpicas (1pc = 12 pt)Try it* Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels.*******
+
+
+
+
+
+
+
+
+******* Relative Lengths
+Relative length units specify a length relative to another length property. Relative length units scale better between different rendering mediums.
+
+UnitDescriptionemRelative to the font-size of the element (2em means 2 times the size of the current font)Try itexRelative to the x-height of the current font (rarely used)Try itchRelative to width of the "0" (zero)Try itremRelative to font-size of the root elementTry itvwRelative to 1% of the width of the viewport*Try itvhRelative to 1% of the height of the viewport*Try itvminRelative to 1% of viewport's* smaller dimensionTry itvmaxRelative to 1% of viewport's* larger dimensionTry it%Relative to the parent element,*******
+
+******* CSS Soecificity*******
+
+******** inherit keyword specifies that a property should inherit its value from its parent element.*******
+jumped to 2D transforms from backgrounds ******

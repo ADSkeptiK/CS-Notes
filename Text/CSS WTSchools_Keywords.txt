@@ -1,0 +1,404 @@
+* :The universal selector (*) selects all HTML elements on the page. 
+
+
+background-color: color / transparent /currentcolor: Defines backgroundcolor.
+
+opacity: 0-1 : Defines the opacity of the element and the child elements. The usage of RGBA colors in background color would only affect the opacity of the color and not the text.
+
+TILL THE END OF BACKGROUND COLOR
+
+background-image : url("address") :Define background.
+
+background-repeat: repeat-y/repeat-x/no-repeat: Will not repeat background in the minused axis or at all.
+background-position: right/left/right top/etc: position.
+
+background-attachment: scroll/fixed Specifies whether the background should be fixed or scrolled.
+
+background :   color url("address") no-repeat right top: Shorthand for defining bakground related selectors and values.
+The order of property values is : background color,background-image, background-repeat, background-attachment,background-position.
+TILL THE BEGINNING OF CSS BORDERS
+
+border-style : dotted/dashed/solid/double/groove/ridge/inset/outset/none/hidden: Defines a border type.
+
+border-width: valuepx valuepx valuepx valuepx: Defines the width of border.If there are only two values it would be considered for top and bottom only.
+
+border-color: color color color color: Defines color for each side of the border.
+
+border: width style color : Used as a shorthand to define a border in general.
+
+border- left/right/top/bottom: Used to define the shorthand property for a specific side.
+
+border-radius: pixelpx or %: Used to define the roundness of the border.
+
+margin:auto/px/ pt/ cm/%/inherit:   used to create space around elements, outside of any defined borders. Negative values are allowed 
+
+margin-top/margin-bottom/margin-right/margin-left:px/ pt/ cm/%/inherit : Can be used to define the margin of a specific side.
+
+margin: bottom right bottom left: Shorthand
+
+padding:px/ pt/ cm/%/inherit: is the space between box and content we can define it for top bottom,left and right as well negative values are not allowed.
+
+padding-top/padding-top/padding-top/padding-top:px/ pt/ cm/%/inherit :
+
+padding: bottom right bottom left: Shorthand
+
+max-width:%/auto/cm/px/initial/inherit/etc: Defines maximum width
+
+max-height:%/auto/cm/px/initial/inherit/etc: Defines maximum height
+min-width:%/auto/cm/px/initial/inherit/etc: Defines min width
+
+min-height:%/auto/cm/px/initial/inherit/etc: Defines min height
+
+height:%/auto/cm/px/initial/inherit/etc
+
+
+outline-style:dotted/dashed/solid/double
+/groove /ridge /inset /outset/none/hidden :
+
+outline-color:
+outline-width:
+outline-offset: Space between outline and border.
+outline: width style color: shorthand.
+
+outline: outline-width outline-style outline-color: The shorthand form
+
+color: hex: The   color  property is used to set the color of the text. 
+
+
+text-align: left/right/center/justify: The justify value means the lines will be stretched to have equal width.
+
+text-align-last: left/right/center/justify:  property specifies how to align the last line of a text 
+
+direction: rtl/ltr: direction of text.
+
+unicode-bidi :   bidi-override : Must be used after the direction to change the direction of element.
+
+vertical-align :baseline/text-top/text-bottom/sub/super 
+
+text-decoration-line: overline/line-through/underline/overline underline:Define line for the text. It's best not to underline a text that is not a link.
+
+text-decoration-color: Defines color for the text decoration.
+
+text-decoration-thickness: thicknessinpx: Defines thickness for texxt decoration.
+
+text-transform : uppercase/lowercase/capitalize: Used to transform text.
+
+text-indent: px: indents.
+
+line-height: number: Specifies space between lines.
+
+word-spacing:numberpx used to specify space between words.
+
+whitespace:nowrap: The text WILL NOT go to the next line when you resize the window.
+
+text-shadow:px px px color: casts shadow
+with the color on the text.You can add another shadow as well using the , followed by the values for the second cast.
+
+font-family: "font name" , "second in case Font","third in case font":
+
+
+font-style : normal/italic/oblique : used to define italic text.
+
+font-weight: nomal/bold: specifies how font is to be displayed.
+
+font-variant :small-caps /normal : Specifies how font is to be displayed.
+
+font-size: px/em/%/vw: sets the size of text.Using em will allow people to change font-size throught browser settings. The vw unit also known as viewport width, makes size responsive this way text size will follow the size of the browser window.Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. 
+
+font: style variant weight size/lineheight family: Shorthand for font.
+
+a:link: The normal state of the link.
+
+a:visited: When the user has visited.
+
+a:hover: When it's hovered on.
+
+a:active: During the moment of click.
+
+text decoration:none/underline: Used to define line or etc for links usually but not limited to.
+
+cursor:auto/crosshair/default/e-resize/help/move/n-resize/nw-resize/pointer/progress/s-resize/se-resize/sw-resize/text/w-resize/wait: S
+
+list-style-type: circle/square/none: style types available for ul tag.
+
+list-style-type: upper-roman/lower-alpha:
+styles available for ol tags.
+
+list-style-image: url("address"): Used to give image to ul tag list.
+
+list-style-position:outside/inside: Defines place of the numbers/dots.
+
+list-style: type position url(""): Shorthand for list style in case the url didn't work the type shows. 
+
+overflow-x: auto: Causes scroll bar to appear when text is overflowing in the x direction.Till the beginning of display.
+
+display: inline/block/etc: Defines how the element is to be displayed.The etc values are:
+
+contents:Makes the container disappear, making the child elements children of the element the next level up in the DOM
+
+flex: Displays an element as a block-level flex container.
+
+grid: Displays an element as a block-level grid container
+
+inline-block: Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+
+inline-flex:Displays an element as an inline-level flex container
+
+
+inline-grid:Displays an element as an inline-level grid container
+
+inline-table:The element is displayed as an inline-level table
+
+list-item: Let the element behave like a <li> element
+
+run-in: Displays an element as either block or inline, depending on context
+table: Let the element behave like a <table> element
+
+table-caption: Let the element behave like a <caption> element
+
+table-column-group: Let the element behave like a <colgroup> element
+
+
+table-header-group:Let the element behave like a <thead> element
+
+table-footer-group:Let the element behave like a <tfoot> element
+
+table-row-group:Let the element behave like a <tbody> element
+
+table-cell:Let the element behave like a <td> element
+
+table-column:Let the element behave like a <col> element
+
+table-row:Let the element behave like a <tr> element
+
+none:The element is completely removed
+
+
+initial:Sets this property to its default value
+
+inherit:Inherits this property from its parent element.
+
+max-width:px/% : Makes window responsive when the  widow gets smaller.
+
+
+position:static/relative/fixed/absolute/sticky:
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the   position  property is set first. They also work differently depending on the position value. HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties.An element with position: static;  is not positioned in any special way; it is always positioned according to the normal flow of the page.relative;  is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.An element with position: absolute;  is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Note:  Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+An element with position: sticky;  is positioned based on the user's scroll position.A sticky element toggles between relative  and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).Note:  Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of   top,   right,   bottom  or   left  for sticky positioning to work. 
+
+z-index: integer: specifies the stack order of an element (which element should be placed in front of, or behind, the others). z-index  only works onpositioned elements  (position: absolute, position: relative, position: fixed, or position: sticky) and flex items  (elements that are direct children of
+display: flex elements).If two positioned elements overlap each other without a   z-index  specified, the element defined   last in the HTML code  will be shown on top. 
+Till overflow.
+
+
+overflow: visible/hidden/scroll/auto:specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area. 
+
+visible  : Default. The overflow is not clipped. The content renders outside the element's box
+
+hidden : The overflow is clipped, and the rest of the content will be invisible
+
+
+scroll : The overflow is clipped, and a scrollbar is added to see the rest of the content
+
+auto : Similar to  scroll, but it adds scrollbars only when necessary
+Note:  The   overflow  property only works for block elements with a specified height. 
+
+overflow-x:visible/hidden/scroll:
+specifies what to do with the left/right edges of the content. 
+
+
+overflow-y:visible/hidden/scroll:specifies what to do with the top/bottom edges of the content. 
+
+
+float:left/right/none/inherit:specifies how an element should float. 
+
+clear:none/left/right/both/inherit:  When we use the   float  property, and we want the next element below (not on right or left), we will have to use the   clear  property. The   clear  property specifies what should happen with the element that is next to a floating element. 
+
+none  - The element is not pushed below left or right floated elements. This is default
+
+left  - The element is pushed below left floated elements
+
+right  - The element is pushed below right floated elements
+
+both  - The element is pushed below both left and right floated elements
+
+inherit  - The element inherits the clear value from its parent.
+
+:active:Selects the active link .
+:checked :Selects every checked <input> element.
+
+:disabled:Selects every disabled <input> element
+
+:empty: Selects every <p> element that has no children.
+
+:enabled:Selects every enabled <input> element.
+
+
+:first-child: Selects every <p> elements that is the first child of its parent.
+
+
+:first-of-type:Selects every <p> element that is the first <p> element of its parent.
+
+:focus:Selects the <input> element that has focus.
+
+
+:hover:Selects links on mouse over.
+
+:in-range:Selects <input> elements with a value within a specified range.
+
+:invalid:Selects all <input> elements with an invalid value.
+
+:lang(language):Selects every <p> element with a lang attribute value starting with "it".
+
+:last-child:Selects every <p> elements that is the last child of its parent.
+
+:last-of-type:Selects every <p> element that is the last <p> element of its parent .
+
+:link:Selects all unvisited links.
+
+:not(selector):Selects every element that is not a <p> element.
+
+:nth-child(n):Selects every <p> element that is the second child of its paren.
+
+:nth-last-child(n):Selects every <p> element that is the second child of its parent, counting from the last child .
+
+:nth-last-of-type(n):Selects every <p> element that is the second <p> element of its parent, counting from the last child .
+
+
+:nth-of-type(n):Selects every <p> element that is the second <p> element of its parent.
+
+:only-of-type:Selects every <p> element that is the only <p> element of its parent.
+
+:only-child:Selects every <p> element that is the only child of its parent.
+
+:optional:Selects <input> elements with no "required" attribute.
+
+:out-of-range:Selects <input> elements with a value outside a specified range .
+
+:read-only:Selects <input> elements with a "readonly" attribute specified.
+
+:read-write:Selects <input> elements with no "readonly" attribute.
+:required:Selects <input> elements with a "required" attribute specified.
+
+:root:Selects the document's root element.
+
+:target:Selects the current active #news element (clicked on a URL containing that anchor name) .
+
+:valid:Selects all <input> elements with a valid value .
+
+:visited: Selects all visited links .
+
+
+::after: Insert content after every <p> element .
+
+::before:Insert content before every <p> element .
+
+::first-letter:Selects the first letter of every <p> element.
+
+::first-line:Selects the first line of every <p> element.
+
+::marker:Selects the markers of list items .
+
+::selection:Selects the portion of an element that is selected by a user.
+
+
+counter-reset: countername : Will define a counter variable with the same name or reset it if it already exists.
+
+counter-increment: countername: Will increment the said counter.
+
+content: "string" : Inserts the said content.
+
+counter(countername): Inserts the value.
+
+border-radius: lefttoppx righttoppx rightdownpx leftdownpx.
+
+border-image: url(url.png) number round:
+First the border element must be set before the border image can work.
+
+border-image-source: 
+Specifies the path to the image to be used as a border.
+ 
+border-image-slice:Specifies how to slice the border image.
+
+border-image-width:Specifies the widths of the border image .
+
+
+
+border-image-outset:Specifies the amount by which the border image area extends beyond the border box.
+
+border-image-repeat:Specifies whether the border image should be repeated, rounded or stretched.
+
+backgroundimage:url(Topstack.img),url(thesecondtop.img)/linear-gradient(color-color)/linear-gradient(to dir ,color,color)/linear-gradient( angle,   color-stop1,   color-stop2)/repeating-linear-gradient( angle,   color-stop1,   color-stop2)/radial-gradient(circle/closest-side/farthest side,red 5%, yellow 15%, green 60%) /conic-gradient([from   angle] [at   position,]   color  [ degree] , color  [ degree] , ...) /repeating-conic-gradient([from   angle] [at   position,]   color  [ degree] , color  [ degree] , ...) :Defines background images from top to bottom.
+
+background: url() position repeat, url position  repeat: Shorthand.
+
+
+background: url() norepeat center fixed:
+Shorthand.
+
+
+background-size: contain/cover/ height width: Specifies the background of elements.Setting the value to contain will scale the image as large as possible within its container,cover will sale it to fit the width and cover of container.
+
+background-origin:border-box/padding-box/content-box: 
+Specifies where the background image is positioned.
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content.
+
+
+background-clip:border-box/padding-box/content-box:  specifies the painting area of the background.
+border-box - (default) the background is painted to the outside edge of the border.
+
+padding-box - the background is painted to the outside edge of the padding.
+
+content-box - the background is painted within the content box.
+
+text-shadow: used to cast shadow.
+
+box-shadow: used to cast shadow for box.
+
+******jump from background to transform******
+
+transform:translate()/rotate()/scaleX()/scaleY()/scale()/skewX()/skewY()/skew()/matrix()/rotateX()/rotateY()/rotateZ(): 
+transform: moves el from current position to said position.
+
+
+
+transform: Applies a 2D or 3D transformation to an element.
+
+transform-origin: Allows you to change the position on transformed elements.
+
+transform-style: Specifies how nested elements are rendered in 3D space
+
+perspective: Specifies the perspective on how 3D elements are viewed
+
+perspective-origin:Specifies the bottom position of 3D elements.
+
+backface-visibility:Defines whether or not an element should be visible when not facing the screen.
+
+matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n):Defines a 3D transformation, using a 4x4 matrix of 16 values
+
+translate3d(x,y,z):Defines a 3D translation
+
+perspective(n)Defines a perspective view for a 3D transformed element.
+
+transition: property duration:
+Transition happens smoothly when the value of the defined said property changes.
+
+transition-timing-function :ease/linear/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n):
+ease  - specifies a transition effect with a slow start, then fast, then end slowly (this is default).
+
+linear  - specifies a transition effect with the same speed from start to end
+
+ease-in  - specifies a transition effect with a slow start
+
+ease-out  - specifies a transition effect with a slow end
+
+ease-in-out  - specifies a transition effect with a slow start and end
+
+cubic-bezier(n,n,n,n)  - lets you define your own values in a cubic-bezier function
+
+
+transition-delay : seconds: Delay befor effects happen.

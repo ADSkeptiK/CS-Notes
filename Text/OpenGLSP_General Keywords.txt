@@ -1,0 +1,24 @@
+Rasterizer: is dedicated hardware that converts the three-dimensional representation of a triangle into a series of pixels that need to be drawn onto the screen.32
+
+Vertex:A single point in space. Except when used for point and line primitives, it also defines the point at which two edges of a polygon meet.
+
+Front end of Graphical pipeline: Processes vertices and primitives.Eventually forming them into the points, lines, and triangles that will be handed off to the rasterizer. This is known as primitive assembly.After going through the rasterizer, the geometry has been converted from what is
+essentially a vector representation into a large number of independent pixels.32B,52PDF
+
+
+Back end: includes depth and stencil testing, fragment shading,blending, and updating of the output image.
+32,52PDF
+
+vertex shader : Responsible for the 3D positioning and attributes.38
+
+fragment shader: Responsible for defining the color and attributes of individual pixels.38
+
+Vertex Attributes: Vertex attributes are how vertex data is introduced into the OpenGL pipeline. To declare a vertex attribute, you declare a variable in the vertex shader using the in storage qualifier. 49
+
+Tessellation: The process of breaking a high-order primitive (known as patch) into smaller primitives such as triangles for rendering.Tessellation sits directly after the vertex processing stage and itself is made of three parts the tessellation control shader, the fixed function tesssellation engine and the tessellation evaluation shader.73pdf
+
+Tessellation Control shader: Takes input from vertex shader and determines the level of tessellation sent to tessellation engine AND the generation of data that will be sent to the evaluation shader.74pdf
+
+control points: Number of points that make a patch.74pdf
+
+Patches: high order surfaces made of control points.74pdf

@@ -1,0 +1,100 @@
+******** The <!DOCTYPE>  declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags).
+The<!DOCTYPE>  declaration is not case sensitive.
+The<!DOCTYPE>  declaration for HTML5 is:
+< !DOCTYPE   html > ******** 
+
+
+******* HTML headings are defined with the  <h1>  to
+ <h6>  tags.
+<h1>  defines the most important heading.
+<h6>  defines the least important heading.*******
+
+******* Attributes are used to provide additional information about HTML elements. *******
+
+******* HTML tags are not case sensitive:   <P>  means the same as   <p>. *******
+
+******All HTML elements can have  attributesAttributes provide  additional information  about elementsAttributes are always specified in  the start tagAttributes usually come in name/value pairs like:  name="value"*******
+******* 1. Absolute URL  - Links to an external image that is hosted on another website. Example:
+
+  src="https://www.w3schools.com/images/img_girl.jpg" .
+
+Notes:  External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.
+
+2. Relative URL  - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".
+
+Tip:  It is almost always best to use relative URLs. They will not break if you change domain.*******
+
+******* Empty tags don't have an end tag.*******
+
+
+*******
+< tagname  style =" property: value;" > The
+
+  property  is a CSS property. The
+
+  value  is a CSS value.*******
+
+
+******* Use   mailto:ex@ex.com  inside the   href  attribute to create a link that opens the user's email program (to let them send a new email)*******
+
+******** By setting background-size selector to cover it will try to cover the  element BUT setting it's clipping to 100% 100% will stretch it to cover the element ENTIRELY. ********
+
+
+******* Always specify an   <img>  element as the last child element of the   <picture>  element. The   <img>  element is used by browsers that do not support the   <picture>  element, or if none of the   <source>  tags match. *******
+
+******** A favicon is a small high contrast icon show at the left of the tab in browser. It can be defined within a link tag's href attribute with the rel attribute set to icon ********
+
+INLINE AND BLOCK
+
+******* Every HTML element has a default display value, depending on what type of element it is.
+The two most common display values are block and inline.*******
+
+*******Block-level Elements
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).Two commonly used block elements are:
+<p>  and <div>.The <p>  element defines a
+paragraph in an HTML document.The <div> 
+element defines a division or a section in an HTML
+document.*******
+*******
+Here are the block-level elements in HTML:
+address > < article > < aside > < blockquote >
+<canvas > < dd > < div > < dl > < dt > < fieldset >
+< figcaption > < figure > < footer > < form > < h1 > -<
+h6 > < header > < hr > < li > < main > < nav >
+<noscript > < ol > < p > < pre > < section > < table >
+<tfoot > < ul > < video > *******
+
+******* Inline Elements
+An inline element does not start on a new line. An
+inline element only takes up as much width as
+necessary.This is a <span> element inside   a
+paragraph.*******
+
+******* Here are the inline elements in HTML: < a >
+<abbr > < acronym > < b > < bdo > < big > < br >
+<button > < cite > < code > < dfn > < em > < i > <img> < input > < kbd > < label > < map > < object >
+< output > < q > < samp > < script > < select >
+< small > < span > < strong > < sub > < sup >
+< textarea > < time > < tt > < var > *******
+
+
+********An inline element cannot contain a block-level element! *******
+
+DIV
+
+******* A div element that is not 100% wide can be centered if we set margin to auto*******
+
+******* The CSS   float  property is used for positioning and formatting content and allow elements float next to each other instead of on top of each other. *******
+
+******* <div>  element's   display  property from   block  to   inline-block, the   <div>  elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other. *******
+
+
+******* The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.
+To make the CSS flex method work, surround the <div>  elements with another
+<div>  element and give it the status as a flex container.*******
+
+
+*******The CSS grid method requires that you surround the   <div>  elements with another   <div>  element and give the status as a grid container, and you must specify the width of each column. ******
+
+*******HTML elements can belong to more than one class.To define multiple classes, separate the class names with a space, e.g. <div class="city main">. The element will be styled according to all the classes specified.*******

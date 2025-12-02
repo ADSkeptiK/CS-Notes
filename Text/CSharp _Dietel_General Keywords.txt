@@ -1,0 +1,8 @@
+The CLR is a virtual machine (VM): A software that manages the execution of programs and hides from them the underlying operating system and hardware. The source code for programs that are executed and managed by the CLR is called managed code.60
+
+
+
+
+
+namespace: Named collections of classes.
+109

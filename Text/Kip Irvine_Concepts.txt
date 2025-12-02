@@ -1,0 +1,383 @@
+******* All x86 processorsunderstand a common machine language. 4*******
+
+******* Assembly language is not portable, because it is designed for a specific processor family.4 *******
+
+******* Registers are named storage locations in the CPU that hold intermediate results of operations.4*******
+
+******* Interpretation : As the L1 program is running, each of its instructions could be decoded and executed by a program written in language L0. The L1 program begins running immediately,but each instruction has to be decoded before it can execute. 7*******
+
+******* Translation : The entire L1 program could be converted into an L0 program by an L0 program specifically designed for this purpose. Then the resulting L0 program could be executed directly on the computer hardware.7*******
+
+******* Virtual Machines:Rather than using only languages, it is easier to think in terms of a hypothetical computer, or virtual machine, at each level. Informally, we can define a virtual machine as a software program that emulates the functions of some other physical or virtual computer. The virtual machine VM1, as we will call it, can execute commands written in language L1. The virtual machine VM0 can execute commands written in language L0.8 *******
+
+
+
+******* Machine VM1 cannot be
+radically different from VM0 because the translation or interpretation would be too time-consuming. What if the language VM1 supports is still not programmerfriendly enough to be used for useful applications? Then another virtual machine, VM2, can be designed that is more easily understood. This process can be repeated until a virtual machine VMn can be designed to support a powerful, easy-to-use language.8 *******
+
+*******  A computer’s digital logic hardware represents machine Level 1. Above this is Level 2, called the instruction set Architecture (ISA). 
+This is the first level at which users can typically write programs, although the programs consist of binary values called machine language.8*******
+
+******* Computer chip manufacturers design into the processor an instruction set to carry out basic operations, such as move, add, or multiply. This set of instructions is also referred to as machine language. Each machine-language instruction is executed either directly by the computer’s hardware or by a program embedded in the microprocessor chip called a microprogram.8*******
+
+******* Above the ISA level, programming languages provide translation layers to make large-scale software development practical. Assembly language, which appears at Level 3, uses short mnemonics such as ADD, SUB, and MOV, which are easily translated to the ISA level. Assembly language programs are translated (assembled) in their entirety into machine language before they begin to execute. 8 *******
+
+******* Each numbering format, or system, has a base, or maximum number of symbols that can be assigned to a single digit. 10********
+
+******* Bits are numbered sequentially starting at zero on the right side and increasing toward the left. The bit on the left is called the most significant bit (MSB), and the bit on the right is the least significant bit (LSB). 10 *******
+
+******* Binary numbers can be signed or unsigned, an unsigned integer is by default positive (Zero is considred positive). When writing down large binary numbers, many people like to insert a dot every 4 bits or 8 bits to make numbers easier to read. 10 *******
+
+******* To translate an unsigned decimal integer into binary, repeatedly divide the integer by 2, saving each remainder as a binary digit till while dividing the quotient  until it gets iterated then we write the numbers from bottom to top and from right to left!!!. 11 *******
+
+*******  In order tgo find how many bits we need to represent a decimal number we use the formula b= ceiling (log2 (n)) *******
+
+******* Binary Addition : When adding two binary integers, proceed bit by bit, starting with the low-order pair of bits (on
+the right) and add each subsequent pair of bits. 12 *******
+
+
+*******  Sometimes a carry is generated out of the highest bit position. When that happens, the size of the storage area set aside becomes important. If we add 11111111 to 00000001, for example, a 1 carries out of the highest bit position, and the lowest 8 bits of the sum equal all zeros.If the storage location for the sum is at least 9 bits long, we can represent the sum as 100000000. But if the sum can only store 8 bits, it will equal to 00000000, the lowest 8 bits of the calculated value
+12 *******
+
+******* The basic storage unit for all data in an x86 computer is a byte, containing 8 bits.
+
+Other storage sizes are word (2 bytes), double word (4 bytes) , and quadword (8 bytes). 13 *******
+******* 
+• One kilobyte is equal to 210, or 1024 bytes.
+• One megabyte (1 MByte) is equal to 220, or 1,048,576 bytes.
+• One gigabyte (1 GByte) is equal to 230, or 10243, or 1,073,741,824 bytes.
+• One terabyte (1 TByte) is equal to 240, or 10244, or 1,099,511,627,776 bytes.
+• One petabyte is equal to 250, or 1,125,899,906,842,624 bytes.
+• One exabyte is equal to 260, or 1,152,921,504,606,846,976 bytes.
+• One zettabyte is equal to 270 bytes.
+• One yottabyte is equal to 280 bytes.13 *******
+
+
+
+
+
+******* In general, you can convert an n-digit integer in any base B to decimal using the following formula: 
+Decimal version = ( Dn-1 * Base to the power of n-1) +... 14
+*******
+
+******* Suppose we want to add two numbers X and Y, using numbering base b. We will number their digits from the lowest position (x0) to the highest. If we add digits xi and yi in X and Y, we produce the value si. If , we recalculate si  (si MOD b) and generate a carry value of 1. When we move to the next pair of digits xi+1 and yi+1, we add the carry value to their sum.
+15 *******
+
+
+
+
+
+
+
+******* Signed binary integers are positive or negative. x86 processors, the MSB indicates the sign: 0 is positive and 1 is
+negative. The following figure shows examples of 8-bit negative and positive integers: Table 16.*******
+
+******* Two's complement representation of  an interger is  its additive inverse.
+(If a number is added to its own additive inverse the sum would be zero). In order to get the Two's complement we'll first invert (write the complement) of the numbers in Hexadecimal or Binary and then add 1 to it .16 *******
+******* To convert signed binary to decimal:
+1- If the signed binary is negative  (The MSB is 1) We'll  first turn it to its positive equivalent  using the two's complement and then turn it to decimal and put a - before it.
+
+2- If the MSB is 0 we just turn it to decimal like an unsinged integer. 17*******
+******* To convert Hexa decimal to decimal:
+
+If the Hexadecimal was negative we first turn it to its two's complement and then turn it to decimal like an unsigned number and then add the - before it.17 ********
+
+******* For obvious reasons (Since the base in Hexadecimal is 16 numbers and we have 4 bits to show each hexadecimal digit ) If the MSB of a Hexadecimal number is >= 8 the number is certainly negative while if it's <=7 it's certainly positive.17 *******
+
+******* The subtraction in binary is pretty much the same as normal subtraction but we need to remember the 2 base. We can also substract in binary by adding the two complement of the seconde number.19 *******
+
+A brief history of character sets and the UTFs in page 19
+
+
+
+******* A table on the inside back cover of this book lists ASCII codes used when running in Windows Console mode. To find the hexadecimal ASCII code of a character, look along the top row of the table and find the column containing the character you want to translate. The most significant digit of the hexadecimal value is in the second row at the top of the table; the least significant digit is in the second column from the left.20 *******
+
+******* Character codes in the range 0 through 31 are called ASCII control characters. 20 *******
+
+******* 
+• A binary integer is an integer stored in memory in its raw format, ready to be used in a calculation. Binary integers are stored in multiples of 8 bits (such as 8, 16, 32, or 64).
+• A digit string is a string of ASCII characters, such as “123” or “65.” This is simply a representation of the number and can be in any of the formats shown for the decimal number 65. 21 *******
+
+******* A multiplexer, a digital component that uses a selector bit (S) to select one of two outputs (X or Y). If S  false, the function output (Z) is the same as X. If S  true, the function output is the same as Y.
+Picture in page 26. *******
+
+
+
+Chapter 2 : x86 processor architecture
+
+******* The central processing unit (CPU), where calculations and logical operations take place, contains a limited number of storage locations named registers, a high-frequency clock, a control unit, and an arithmetic logic unit. 33 *******
+
+*******  The memory storage unit is where instructions and data are held while a computer program is running. The storage unit receives requests for data from the CPU, transfers data from randomaccess memory (RAM) to the CPU, and transfers data from the CPU into memory. All processing of data takes place within the CPU, so programs residing in memory must be copied into the CPU before they can execute. Individual program instructions can be copied into the CPU one at a time, or groups of instructions can be copied together. 33 *******
+******* A  computer system usually  combines four bus types: data,I/O, control and address. 33*******
+
+******* The duration of a clock cycle is calculated as the repciprocal of the clock's speed. which in turn is measured in oscillations per second.34*******
+
+*********** Clock speed is in Hz while clock cycle is in seconds. 34*******
+
+
+******* A machine instruction requires at least one clock cycle to execute, a few  require in excess of 50 clocks ( The multiply instruction on the 8088 processor for example).
+Instructions requiring memory access often have empty clock cycles called wait states because of the differences in the speeds of the CPU, the system bus , and memory circuits.34*******
+
+
+
+
+******* Within the  Instruction execution cycle.
+
+1. The CPU fetches the instruction  from the instruction queue and immediately  increments the instruction pointer.
+
+2. The CPU decodes the instructions by looking at the bit pattern which might reveal if there are any Operands and operators if there are any.
+
+3. CPU fetches the operands from registers and memory sometimes it involves address calculations.
+
+4. CPU executes the instruction using any operand values it fetched during the earlier step  it also updates a few flags such as the carry,zero and overflow flag.
+
+5. Finally if an output operand was part of
+the instruction, the CPU stores the result of its execution in the operand. 35 *******
+
+******* Computers read memory far slower than they access internal registers because a single value from memory invokes four separate steps:
+
+1- Placing the address of the value you want to read on the address bus.
+
+2- Asserting the value of processors RD (read) pin
+
+3- Waiting one clock cycle for memory chips to respond
+
+4- Copying the data from the data boss to the destination operand.36*******
+
+
+
+******* Each of these steps generally requires a single clock cycle, a measurement of time based on aclock that ticks inside the processor at a regular rate.A speed of 1.2 GHz, for example, means the clock ticks, or oscillates, 1.2 billion times per second. So, 4 clock cycles go by fairly fast, considering each one lasts for only 1/1,200,000,000th of a second. Still, that’s much slower than the CPU registers, which are usually accessed in only one clock cycle.36 *******
+
+******* Cache memory for the x86 family comes in two types: Level 1 cache ( or primary cache) is stored right on the CPU while the Level 2 cache is a little bit slower and attached to the CPU by a high-speed data bus. The two types of cache work together in an optimal way.36*******
+
+******* Cache memory is much faster than the conventional  RAM because  it's  constructed from a special type of memory called static RAM. It's expensive  but it does not have to be constantly refreshed in order to keep its content*******
+
+******* The conventional RAM known as dynamic RAM must be refreshed constantly, it's  much slower but cheaper.36 *******
+******* Before a program can run it must be loaded into memory by a utility known as a program loader. After loading, the OS  must point thr CPU to the program's entry point which is the address at which the program is to begin exectution.36*******
+
+******* Process of loading assembly prohram.The OS searches for the program's  filename in the current disk directory. If it cannot find the name there, it searches a set of predetermined directories. (called Paths). If the program file is found the OS then retrieves basic info about the program's  file from the disk directory such as file size and physical location on disk drive. The OS then determines memory and loads program file size and location  into a table sometimes called a descriptor table. Additionally the OS may adjust the values of pointers within the program so they contain the addresses of  program data. Execution begins execution of the program's first machine instruction (it's entry point.As soon as the program begins running it's  called process.The OS assigns the process an identification number(Process ID) which is used to keep track of it while running. The process runs by itself. It's the OS's duty to answer its requests.When process ends, it's  removed from memory.37 *******
+
+******* x86 processors have three modes of operation: Protected mode, real address mode and system management  mode. A sub mode, named virtual 8086 mode is a special case of protected mode.37 *******
+
+******* In 32 bit protected mode a task or program can address a linear address space of up to 4GBytes.
+Beginning with the p6 processor a technique called extended physical addressing allows a total of 64 GBytes  of physical memory to be addressed.Real address mode programs  can only address a range of 1MByte. If the processor is in protected mode and running multiple programs in virtual-8086 mode, each program will have it's own 1MByte memory area.38*******
+
+******** Since registers are high speed registers, we used them to keep the counter of our loops for example.39*******
+
+
+******* There are 8 general purpuse ,registers, six segment registers , a processor status flags (EFLAGS) register and an instruction pointer (EIP).39*******
+
+******** The general purpose registers are used for arithmetic and data movement.39*******
+
+
+
+
+******* While the x registers can be accessed using both 16 bit and the lower and higher 8 bits of their 16 bits, the remaining general purpose registers can only be acessed using 32 bit and 16 bit names.39 *******
+
+******* Common Register uses:
+EAX: Is automatically used by the multiplication and division instructions. It is often called the extended accumulator register .
+
+ECX: Automatically used by CPU as the loop counter.
+
+ESP: Addresses the data on stack and is rarely used for  ordinary arithmetic  or data transfer. It is often called the extended stack pointer register.
+
+ESI and  EDI : are used by high speed memory  transfer instructions.They are sometimes called extended source index and extended destination index registers.
+
+EBP : Is used by high level languages  to reference function parameters and local variables on the stack.It should not be used for ordinary arithmrtic or data.
+40*******
+
+******* In real address mode 16 bit segment registers indicate base addresses of preassigned memory areas named segments.In protected mode, segment registers hold pointersto segment descriptor tables. Some segments hold program instructions (code), others hold variables (data), and another segment named the stack segment holds local function variables and
+function parameters.40*******
+
+******* The EIP or extended instruction pointer, register contains  the address of the next instruction to be executed. Certain machine instructions manipulate EIP, causing the program to  branch to a new location.40*******
+
+******* The Eflags registers consists of individual binary bits that control the operation of CPU or reflect the outcome of some CPU operation.40*******
+
+******* A flag is set when it equals to 1 and is cleared/resetted when it equals to 0.40*******
+
+******* Control flags control the CPU’s operation. For example, they can cause the
+CPU to break after every instruction
+executes, interrupt when arithmetic overflow is detected,enter virtual-8086 mode, and enter protected mode. 40*******
+
+******* Status Flags The status flags reflect the outcomes of arithmetic and logical operations performed by the CPU. They are the Overflow, Sign, Zero, Auxiliary Carry, Parity, and Carry flags.40*******
+
+******* The Carry flag (CF) is set when the result of an unsigned arithmetic operation is too large to fit into the destination.40*******
+
+******* The Overflow flag (OF) is set when the result of a signed arithmetic operation is too large or too small to fit into the destination. 40 *******
+
+
+******* The Sign flag (SF) is set when the result of an arithmetic or logical operation generates a negative result. 40*******
+
+*******The Zero flag (ZF) is set when the result of an arithmetic or logical operation generates a result of zero.40*******
+
+******* The Auxiliary Carry flag (AC) is set when an arithmetic operation causes a carry from bit 3 to bit 4 in an 8-bit operand.40 *******
+
+*******  The Parity flag (PF) is set if the least-significant byte in the result contains an even number of 1 bits. Otherwise, PF is clear. In general, it is used for error checking when there is a possibility that data might be altered or corrupted.40 *******
+
+******* MMX technology improves the performance of Intel processors when implementing advanced multimedia and communications applications. The eight 64-bit MMX registers support special instructions called SIMD (Single-Instruction, Multiple-Data). As the name implies, MMX instructions operate in parallel on the data values contained in MMX registers. Although they appear to be separate registers, the MMX register names are in fact aliases to the same registers used by the floating-point unit.41 *******
+
+******* XMM The x86 architecture also contains eight 128-bit registers called XMM registers. They are used by streaming SIMD extensions to the instruction set.41 *******
+=================================
+******* In real-address mode, only 1 MByte of memory can be addressed, from hexadecimal 00000 to FFFFF. The processor can run only one program at a time, but it can momentarily interrupt that program to process requests (called interrupts) from peripherals. Application programs are permitted to access any memory location, including addresses that are linked directly to system hardware. The MS-DOS operating system runs in real-address mode, and Windows 95 and 98can be booted into this mode.
+In protected mode, the processor can run multiple programs at the same time. It assigns eachprocess (running program) a total of 4 GByte of memory. Each program can be assigned its ownreserved memory area, and programs are prevented from accidentally accessing each other’scode and data. MS-Windows and Linux run in protected mode.
+In virtual-8086 mode, the computer runs in protected mode and creates a virtual-8086machine with its own 1-MByte address space that simulates an 80x86 computer running in realaddress mode. Windows NT and 2000, for example, create a virtual-8086 machine when you open a Command window. You can run many such windows at the same time, and each
+is protected from the actions of the others. Some MS-DOS programs that make direct references to computer hardware will not run in this mode under Windows NT, 2000, and XP.42 *******
+
+
+
+******** The instruction set is a 64-bit extension of the x86 instruction set we’ve already looked at. Here are some of the essential features:
+1. It is backward-compatible with the x86 instruction set.
+2. Addresses are 64 bits long, allowing for a virtual address space of size 264 bytes. In currentchip implementations, only the lowest 48 bits are used.
+3. It can use 64-bit general-purpose registers, allowing instructions to have 64-bit integeroperands.
+4. It uses eight more general-purpose registers than the x86.
+5. It uses a 48-bit physical address space, which supports up to 256 terabytes of RAM.
+On the other hand, when running in native 64-bit mode, these processors do not support
+16-bit real mode or virtual-8086 mode. (There is a legacy mode that still supports 16-bit programming, but it is not available in 64-bit versions of Microsoft Windows.42 *******
+
+ ******* 64-Bit Operation Modes:The Intel 64 architecture introduces a new mode named IA-32e. Technically it contains two submodes, named compatibility mode and 64-bit mode. But it’s easier to refer to these as modesrather than submodes, so we will do that
+from now on.Compatibility Mode
+When running in compatibility mode, existing 16-bit and 32-bit applications can usually runwithout being recompiled. However, 16-bit Windows (Win16) and DOS applications will not run in 64-bit Microsoft Windows. Unlike earlier versions of Windows, 64-bit Windows does not have a virtual DOS machine subsystem to take advantage of the processor’s ability to switch into virtual-8086 mode. 64-Bit ModeIn 64-bit mode, the processor runs applications that use the 64-bit linear address space. This is the native mode for 64-bit Microsoft Windows. This mode enables 64-bit instruction operands.43******* 
+
+
+
+******* In terms of registers, the following
+are the most important differences from 32-bit processors: Sixteen 64-bit general purpose registers (in 32-bit mode, you have only eight general-purpose registers)
+• Eight 80-bit floating-point registers • A 64-bit status flags register named RFLAGS (only the lower 32 bits are used)• A 64-bit instruction pointer named RIP
+As you may recall, the 32-bit flags and instruction pointers are named EFLAGS and EIP. In addition, there are some specialized registers for multimedia processing we mentioned whentalking about the x86 processor:• Eight 64-bit MMX registers• Sixteen 128-bit XMM registers (in 32-bit
+mode, you have only 8 of these
+.42*******
+
+*******In 64-bit mode, the default operand size is 32 bits and there are eight general
+purpose registers. By adding the REX (register extension) prefix to each instruction, however, the operands can be 64 bits long and a total of 16 general-purpose registers become available. You have all the same registers as in 32-bit mode, plus eight numbered registers, R8 through R15. Table 2-1 shows which registers are available when the REX prefix is enabled.44*******
+
+*******Here are a few more details to remember:
+• In 64-bit mode, a single instruction cannot access both a high-byte register, such as AH, BH,
+CH, and DH, and at the same time, the low byte of one of the new byte registers (such as DIL).
+• The 32-bit EFLAGS register is replaced by a 64-bit RFLAGS register in 64-bit mode. The two registers share the same lower 32 bits, and the upper 32 bits of RFLAGS are not used.
+• The status flags are the same in 32-bit mode and 64-bit mode. 44*******
+
+ ******* The Floating-Point Unit (FPU) handles floating-point and extended integer calculations. 
+• The 8284/82C284 Clock Generator, known simply as the clock, oscillates at a constant speed.
+The clock generator synchronizes the CPU and the rest of the computer. 
+
+• The 8259A Programmable Interrupt Controller (PIC) handles external interrupts from hardware devices, such as the keyboard, system clock, and disk drives. These devices interrupt the CPU and make it process their requests immediately. 
+• The 8253 Programmable Interval Timer/Counter interrupts the system 18.2 times per second,updates the system date and clock, and controls the speaker. It is also responsible for constantly refreshing memory because RAM memory chips can remember their data for only a few milliseconds. 
+• The 8255 Programmable Parallel Port transfers data to and from the computer using the IEEE Parallel Port interface. This port is commonly used for printers, but it can be used with other input–output devices as well.45*******
+
+
+
+
+
+Chapter 3: Assembly Language Fundamentals
+
+******* Integer Literals notation :
+[{+ | - }] digits [ radix ] 
+.55*******
+
+******* A decimal real contains an optional sign followed by an integer, a decimal point, an optional integer that expresses a fraction, and an optional exponent:
+[sign]integer.[integer][exponent]
+These are the formats for the sign and exponent:
+sign {+,-}exponent E[{+,-}]integer 
+.57*******
+
+************ DIRECTIVES ARE NOT CASE SENSITIVE BY DEFAULT.59**************
+
+******* Defining Segments One important function of assembler directives is to define program sections, or segments. Segments are sections of a program that have different purposes. For example, one segment can be used to define variables, and is identified by the .DATA directive:
+
+.data
+The .CODE directive identifies the area of a program containing executable instructions:
+.code
+The .STACK directive identifies the area of a program holding the runtime stack, setting its size:
+
+.stack 100h
+Appendix A contains a useful reference for directives and operators.59 *******
+
+*******
+[label:] mnemonic [operands] [;comment]
+.60 *******
+
+******* A data label identifies the location of a variable, providing a convenient way to reference the
+variable in code. The following, for example, defines a variable named count:
+count DWORD 100
+
+
+A label in the code area of a program (where instructions are located) must end with a colon
+(:) character. Code labels are used as targets of jumping and looping instructions. For example,
+the following JMP (jump) instruction transfers control to the location marked by the label named
+target, creating a loop:
+target:
+mov ax,bx
+...
+jmp target
+A code label can share the same line with an instruction, or it can be on a line by itself:
+L1: mov ax,bx
+L2:
+
+60*******
+
+**********The .386 directive,identifies this as a 32-bit program that can access
+32-bit registers and addresses.We use the calling convention (named stdcall) for procedures because 32-bit Windows services require the stdcall convention to be used. We set sets aside 4096 bytes of storage for the runtime stack, which every programmust have. 
+
+ExitProcess function is a standard Windows service. A prototype consists of the function name, the PROTO keyword, a comma, and a list of input parameters as in:
+
+ExitProcess PROTO, dwExitCode:DWORD
+
+
+The input parameter for ExitProcess is named dwExitCode You might think of it as a return value passed back to the Window operating system. A return value of zero usually means our program was successful. Any other integer value generally indicates an error code number. So, you can think of your assembly programs as subroutines, or processes, which are called by the operating system. When your program is ready to finish, it calls ExitProcess and returns an integer that tells the operating system that your
+programworked just fine.63-64***********
+
+******* the .MODEL directive tells the assembler which memory model to use:
+
+.model flat,stdcall
+
+in 32-bit programs, we always use the flat memory model, which is associated with the processor’s protected mode. We talked about protected mode in Chapter 2. The stdcall keyword tells the assembler how to manage the runtime stack when procedures are called
+.64*******
+
+
+******* The .STACK directive tells the assembler how many bytes of memory to reserve for the program’s runtime stack:
+
+.stack 4096
+
+The value 4096 is probably more than we will ever use, but it happens to correspond to the size of a memory page in the processor’s system for managing memory. All modern programs use a stack when calling subroutines—first, to hold passed parameters, and second, to hold the address of the code that called the function. The CPU uses this address to return when the function call finishes, back to the spot where the function was called. In addition, the runtime stack can hold local variables, that is, variables declared inside a function .64 *******
+
+******* The value of the registers are shown in Hexadecimal in a debugger.68 *******
+*******
+We declare our variables in the .data segment.70
+*******
+******* 
+; Program template (Template.asm)
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess PROTO, dwExitCode:DWORD
+.data
+; declare variables here
+.code
+main PROC
+; write your code hereINVOKE ExitProcess,0main ENDPEND main .70*******
+
+******* A data definition sets aside storage in memory for a variable with an optional name and follows the syntax:
+[Name] directive initializer [ , initializer] .
+Name is an optional name assigned
+to a variable must conform to the rules for identifiers. The directive in a data
+definition statement can be any intrinsic data types.75 *******
+
+*******
+
+
+
+
+
+
+
+**************** The only exception to the array defining rule is the BYTE strings. We can define (Usually NULL terminated strings) like we did in the char arrays in C.
+e.g: NAME BYTE "John",0
+is literally equivalant to : NAME BYTE 'J','o','n',0.77****************
+
+******* A string can be divided between multiple lines without.The line continuation character (\) concatenates two source code lines into a single statement.78*******
+************************ Intel stores a packed binary coded decimal (BCD) integers in a 10-byte package. Each byte (except the highest) contains two decimal digits. In the lower 9 storage bytes, each half-byte holds a single decimal digit.In the highest byte, the highest bit indicates the number’s sign. If the highest byte equals 80h, the number is negative; if the highestbyte equals 00h, the number is positive.80*******
+
+
+******* x86 processors store and retrieve data from memory using little-endian order (low to high). The least significant byte is stored at the first memory address allocated for the data. The remaining bytes are stored in the next consecutive memory positions. Consider the doubleword 12345678h. If placed in memory at offset 0000, 78h would be stored in the first byte, 56h would be stored in the second byte, and the remaining bytes would be at offsets 0002 and 0003.82*******
+
+****************** The ways bytes are stored in multiple byte data types can be Little Endian or Big Endian and intel uses Little Endian order .83*******************

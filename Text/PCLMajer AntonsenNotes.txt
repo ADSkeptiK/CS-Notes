@@ -1,0 +1,1 @@
+******* When power is on PLC boots up and loads the firmware,ensuring it knows the connected hardware.Followed by output modules set to their initialization values.17*******

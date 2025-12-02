@@ -1,0 +1,10 @@
+******* Our files in git first start from being untracked.We then proceed to "add" the first snapshot by the git add file.extension command  in the git directory.If we get a status then it says changes to be committed which means the snapshot of the current file exists. From this point on each change to the file requires an add to be kept.*******
+
+******* Git init creates the initial or master branch.*******
+
+******* It's with each commit that the data is actually saved******
+
+***** By creating a branch a clone of the master root is created and "added" by default*******
+
+******* In order to merge a branch into another(ADD its commit to the log of it) We first go into the branch we want to add the other one into!
+Then use the  git merge branchname command to merge(add its commits to the current branches log)

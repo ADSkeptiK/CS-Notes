@@ -1,0 +1,17 @@
+Shift+A: Open mesh menu.
+
+Shift+S: Open grid menu.
+
+F9: bring back segment menu
+
+Control+alt+shift+left click+ move mouse: zoom in.
+
+N: Open tools window.
+
+TAB: Used to Enter Edit Mode.
+
+Shift + D : Duplicate selected obj.
+
+F2: Rename.
+
+H: Hides selected vertecies.

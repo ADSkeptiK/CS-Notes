@@ -1,0 +1,19 @@
+code filename.c: Opens the files.12:55_Week1_Lecture1
+
+make filename: Compiles it.13:00_Week1_Lecture1
+
+./:hello : This is how we get back to the directory and run  the program.15:00_Week1_Lecture1
+
+Linux commands:
+
+ls: Lists.
+The programs (executables) have an astrix at the end of their names.1:39:00_Week1_Lecture1
+mv filename filename: Can be used to change the filename.1:40:00_Week1_Lecture1
+cp:Copy.1:44:48_Week1_Lecture1
+
+mkdir: Make directory, new folder.
+1:44:48_Week1_Lecture1
+
+rm: Remove directory/folder.1:44:48_Week1_Lecture1
+
+32

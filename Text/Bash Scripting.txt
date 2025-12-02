@@ -1,0 +1,5 @@
+cd directory/folder: directory could be changed this way. Even drive could be changed.
+
+nano filename.extention: Used to create/open file in nano. ctrl+o saves the changes to file in nano. ctrl+x is used to exit nano.
+
+cat filename.extension: Used to show the contents of file.

@@ -1,0 +1,186 @@
+HTML Tag color.
+Attribute color.
+CSS property color.
+CSS value color.
+
+<!DOCTYPE html> = Necessary at the beginning of html files
+
+<html> : root element of an HTML page 
+<head> : contains meta information about the HTML page 
+<body> : defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. 
+
+<h1>: defines a large heading 
+
+<p>: defines a paragraph 
+
+<a href="Link">LinkText</a>: Defines link.
+
+
+<img src="Address" alt="Replacement text" width="600" Height= "100"> : Used to link image.
+
+ <br> : defines a line break
+
+title: Defines some extra info about an 
+element.
+
+
+font-size:60px : Can be used to change font size.
+
+<hr> : defines a horizontal line break.
+
+<pre></pre>: The tag shows the text within it WITH the spaces and tabs and etc...
+
+background-color:powderblue : defines the background color for an HTML element. 
+
+color: Defines the text color for an HTML element.
+
+font-family : Defines the font to be used for an HTML element.
+
+font-size: Defines the text size for an HTML element.
+
+text-align: Defines the horizontal text alignment for an HTML element.
+
+<b>B</b> : Bolds the text in it.
+<strong>S</strong>: Defines text with strong importance and usually makes bold.
+
+<i>I</i> : Defines a part of text in an alternate voice or mood . The content inside is typically displayed in italic.is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc. 
+
+<em>EM</em>: defines emphasized text. The content inside is typically displayed in italic.A screen reader will pronounce the words in <em>  with an emphasis, using verbal stress.
+
+<small> </small>:defines smaller text 
+
+<mark></mark>:  element defines text that should be marked or highlighted 
+
+<del> </del>: Defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:.
+
+<ins> </ins>:  element defines a text that has been inserted into a document. Browsers will usually underline inserted text 
+
+<sub> </sub>: element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H 2O.
+
+<sup> </sup>:  element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW [1]
+
+<blockquote> </blockquote>:  element defines a section that is quoted from another source. Browsers usually indent   <blockquote>  elements. 
+
+
+
+<q> </q>:  Defines a short quotation.Browsers normally insert quotation marks around the quotation. 
+
+<abbr> </abbr>: tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".Marking abbreviations can give useful information to browsers, translation systems and search-engines.Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.  
+
+<address> </address>:defines the contact information for the author/owner of a document or an article.The contact information can be an email address, URL, physical address, phone number, social media handle, etc.The text in the <address>  element usually renders in
+italic,  and browsers will always add a line break before and after the <address>  element.
+
+
+<cite> </cite> : defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). Notes:  A person's name is not the title of a work. The text in the  <cite>  element usually renders in italic.
+
+color: colorname/code/etc : Used to define color for text element.
+
+font-family: fontname : Used to define font.
+
+font-size: size px : Used to define font size.
+
+border: thicknesspx solid/dashed/dotted color
+
+padding :  thicknesspx : defines a padding (space) between the text and the border. 
+
+margin: thicknesspx : defines a margin (space) outside the border. 
+
+<a href="sds" target="_blank/_self/ parent/_top">link</a>:
+opens a link.
+
+ title = "TRE" : The attribute specifies extra info about an
+ element.
+
+    _self  - Default. Opens the document in the same window
+    tab as it was clicked.
+
+    _blank :  Opens the document in a new window or tab.
+
+    _parent : Opens the document in the parent frame.
+
+    _top : Opens the document in the full body of the window
+
+ <button onclick="sa"> Text</button>: Defines a button.
+
+id="identifier": It creates a book mark for its element which can be used as a #link in the href attributes of the <a></a> tag or as a link to a part of another document within another HTML page the same way but after the doc name.
+
+<img src ="url" alt="namenosource  height="500px" width = "500px">:
+Link an image.The size of the image is usually adjusted by the CSS selectors width and height.
+
+  usemap="#name": Used for mapping.
+
+TILL HTML IMAGES
+
+<map name="nameintheusemapattributewithouth thehash"></map>: Defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+
+   <area shape="rect" coord=", , ," alt= "ss"
+   href="hs.htm">:  Used to define an area
+   of the mapped picture. if the shape's
+   value is circle the coords would be width,
+   height,radius.
+
+<picture></picture>:  allows to display different pictures for different devices or screen sizes.The element contains one or more   <source>  elements, each referring to different images through the   srcset  attribute. This way the browser can choose the image that best fits the current view and/or device. The media attribute can be used to set a min-width for pictures
+media ="(min-width: 650px)"   srcset ="img_food.jpg" .
+
+ <source></source>:Each   <source>  element has a   media  attribute that defines when the image is the most suitable.  
+
+<title> </title>:defines a title in the browser toolbarprovides a title for the page when it is added to favoritesdisplays a title for the page in search engine-resultsSo, try to make the title as accurate and meaningful as possible.
+
+<table></table>: The attribute can be used to define a table.
+  
+  <tr></tr> : Defines a table row
+
+  <th></th>: Defines the headers for each
+  column.
+  
+  <td></td>: Defines the data in each
+  column. It's each cell of the table
+   basically.
+ 
+ <caption></caption>: It comes
+ immediately within the table tag and writes
+ its name.
+
+ colspan="3": It defines how many columns
+ the row would cover.
+
+ rowspan="4" : It defines how many rows
+ the column would cover.
+
+ <colgroup></colgroup>: Used to separate a group of columns for easier styling. it has a span attribute defining the range.There is only a very limited selection of CSS properties that are allowed to be used in the colgroup:
+width  property
+visibility  property
+background  properties
+border  properties
+All other CSS properties will have no effect on your tables.
+
+<ul><ul>: Unordered list.
+Each item starts with the <li><li> tag.
+The list items will be marked with bullets (small black circles) by default .
+
+<li></li>: List item.
+
+<ol></ol>: ordered list will be marked with numbers by default.The   type  attribute of the   <ol>  tag, defines the type of the list item marker: type="1"The list items will be numbered with numbers (default)type="A"The list items will be numbered with uppercase letterstype="a"The list items will be numbered with lowercase letterstype="I"The list items will be numbered with uppercase roman numberstype="i"The list items will be numbered with lowercase roman numbers.
+By default, an ordered list will start counting from 1. If you want to start counting from a specified number, you can use the   start  attribute.
+
+<dl></dl>:A description list is a list of terms, with a description of each term. tag defines the description list, the   <dt>  tag defines the term (name), and the   <dd>  tag describes each term.
+
+<span></span>:The element is an inline container used to mark up a part of a text, or a part of a document. element has no required attributes, but   style,   class  and   id  are common. 
+
+
+<div></div> : A block element that takes all the available width.It is often used to group sections of a web page together. If you have a   <div>  element that is not 100% wide, and you want to center-align it, set the CSS   margin  property to   auto. 
+
+ class="Name": An attribute used to define
+ class. It can later be used in .classname
+ by CSS.
+
+
+id = "Name": Sets an ID which can later be referenced starting by a hash.
+
+
+<iframe></iframe>:An HTML iframe is used to display a web page within a web page. The title attribute for the iframe can be given a name which a screen reader would read. An iframe can be used as a target frame for a link .The   target  attribute of the link must refer to the   name  attribute of the iframe .
+
+<script></script>:  Is used to define a client-side script (JavaScript).
+The <script>  element either contains script statements, or it points to an external script file through the src  attribute.Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.To select an HTML element, JavaScript most often uses the document.getElementById()  method.
+
+<head></head>:The   <head>  element is a container for metadata (data about data) and is placed between the   <html>  tag and the   <body>  tag. HTML metadata is data about the HTML document. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.

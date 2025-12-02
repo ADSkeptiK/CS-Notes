@@ -1,0 +1,63 @@
+glClearBufferfv (GLemum buffer ,GLint
+drawBuffer,const GLfloat * value):
+Clears the buffer specified by the first parameter with the value specified in the third parameter.The param2 is the draw buffer mainly used for when there are multiple output buffers and is a zero based index.fv means floating point vectors.36b*******
+
+#version 450 core : Tells shader compiler that we wanna use the 4/5 version of shading language.38
+
+void main (void): Entry for GLSL.38
+
+gl_Position: Represents the output position of vertex.38
+
+
+
+vec4(floatvalue,floatvalue,floatvalue,floatvalue): turns the coordinates to understandable value for gl_Position.39
+
+out: Declaring as output variable.39
+
+GLuint: Genuine type for variables to contain shader(processed/obj).40
+
+static const GLchar*[]={
+"   \n"
+"   \n"
+}; : Type used to hold shader source codes.40
+
+glCreateShader(GL_TYPEOFSHADER_SHADER): Returns an empty shader obj of the given type.40
+
+
+
+glShaderSource(GLuint ShaderObj,ShaderCount,GLuint length): hands shader source code to the shader
+object so that it can keep a copy of it.40
+
+glCompileShader(): Compiles a shader obj that's holding a shader source code.40
+
+glCreateProgram():  creates a program object to which you can attach shader objects.41
+
+glAttachShader(Program shaderObj,AttachingShaderObj):Attaches shader objs to a program.41
+
+glDeleteShader(ShaderObj): Deletes shader obj.41
+
+
+
+glCreateVertexArrays(number of arrays,nameofarray(Apointer to the beginning of an array of GLuint******* CAUSE IT'S A VALUE THAT WE WANNA TREAT AS A MEMBER OF AN ARRAY)):Creates a VAO.42
+
+glBindVertexArray(GLuint array):Is used to bind VAO to the context.43
+
+glUseProgram(GLuint program):
+Tells the system to use the program for rendering.43
+
+glDrawArrays(ModeOfRendering(GL_POINTS/GL_TRIANGLES/GL_LINES,first(the index of vertice to start incrementing from.It reruns the same shader for a sequence of vertices starting by first and   increments the gl_VertexId after each run.44
+
+
+
+glVertexAttrib4fv(GLuint index,const GLfloat *v):index is used to reference the vertex attribute while v is a pointer to the new data to put into the attribute.69pdf
+
+GLSL***layout (location = unsigned int) : We use it to set the location of the vertex attribute to the indext.69
+
+GLSL*** out/in tag(blockname) { type var; } instanceName:
+Used to define interface blocks.INTERFACE BLOCKS ARE TRANSFERRED USING THE TAG OR BLOCK NAME NOT THE name.73
+
+
+
+glPatchParameteri(GLenum pname,GLint value): Used to define the number of input control points.74pdf
+
+gl_in: built in zero indexed array containing the index of control point within the

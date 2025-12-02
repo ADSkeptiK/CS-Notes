@@ -1,0 +1,10 @@
+Signals: Binary information is  represented in computers by  physical quantities called signals. 5
+
+Gates: The manipulation of binary  info is done by logic circuits called Gates.
+Gates are blocks of hardware that produce  signals of binary 0 or  1 when iput logic  requirements are satisfied.5
+
+Inverter: It produces the NOT or complement function. 5
+
+Buffer: Is a circuit  that does not produce any particular logic function and is used merely for poer amplification. 7
+
+Minterm: Each combination of the variables in a truth table i called a minterm. 11!

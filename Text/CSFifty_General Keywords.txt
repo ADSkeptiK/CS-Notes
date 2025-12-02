@@ -1,0 +1,13 @@
+Transistors: Little switches in computers used to repreasent ones and zeros and electricity. 20:00_Week0_Lecture0
+
+Algorithm: Step by step instructions on how to solve problems. 57:00_Week0_Lecture0
+
+Function: An implementation  of an algorithm. 1:17_Week0_Lecture0
+
+Event: A happening. 1:20_Week0_Lecture0
+
+
+Truncation: Losing an extra part of number.2:20:00_Week1_Lecture1
+
+TypeCasting: We put the type of data in parentheses before the variable to turn it to that type
+2:23:48_Week1_Lecture1

@@ -1,0 +1,44 @@
+; : It startsd the one line comments.54
+
+DWORD: Defines 32 bits for the value on left .55
+
+stc :   sets the carry flag.  61
+
+inc: Has one operand and adds 1 to the operand. E.g: inc eax.61
+
+imul: The instruction has three operands in which the first operand is the destination and the following two operands are source operands which are multiplied together.62
+
+
+
+.386 : Identifies the program as a 32 bit one that can access 32 bit registers and addresses.63
+
+.model flat,stdcall:  identifies the memory model of the program.In 32-bit programs, we always use the flat memory model, which is associated with the processor's protected mode.63
+
+ flat : A possible memory model for programs.63
+
+stdcall: a calling convention required for 32 Windows services applications.63
+
+.stack: Used to specify the number of bytes that are  needed for runtime stack.63
+
+Procedurename PROTO, parameter:parametersize:
+A  procedure prototype.64
+
+main PROC: It defines the procedure and its beginning.64
+
+main ENDP: Marks the end of a procedure.65
+
+END main: Marks the end of the program and references the program ENTRY POINT.If you add any more lines to a program after the END directive, they will be ignored by the
+assembler. You can put anything there
+program comments, copies of your code, etc.It doesn’t matter.65
+
+INVOKE procedure name,parameter:
+Invokes the procedure .63
+
+? : This initializer leaves the variable uninitialized.77
+NAME DIRECTIVE INITIALIZER [INITIALIZER1,initializer2,initializer3]:
+This is how we define variables. Were we to continue the definition on the next line, we have to re state the directive again before the initializers.77
+
+DUP() : Is an operator (function,LITERALLY) that assigns the value in the parentheses after it.
+The DUP operator allocates storage for multiple data items, using a integer expression as a counter. 78
+
+CONSTANTNAME =  value: Used to define constants.84

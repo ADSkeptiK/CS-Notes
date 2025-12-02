@@ -1,0 +1,48 @@
+git init: When entered while in a directory it will be under gits watch. It becomes the gits root basically I guess
+
+git status: Shows the status of files within the root directory.
+
+git add file.extension: Adds the version/updated version of the file
+
+git add . : add all changes to the staging area.
+
+git commit -m "name of this version": Saves all the changes as a version and record that as message.
+
+
+git config  --global user.name "name": Used to define name.
+
+git config --global user.email
+"a@email.com": Used to define email.
+
+git log: gives a history of commits.
+
+
+git branch BRANCHNAME: Creates a branch with the BRANCHNAME.
+
+git branch: Shows branches
+
+git branch -d branchname: Deletes branch.
+
+git merge branchname: merges branchname into current branch
+
+
+git show commitID : Shows the changes added in that commit.
+
+
+git diff currentbranch..otherbranch:Give me the difference between currentbranch and other branch.
+
+
+git reset --hard commitID: Takes us back to former commit. REMOVES the files that were not present back then.
+
+
+git reset commitID: Takes us back to former commit. Doesn't REMOVE the files that were not present back then.
+
+git stash: Saves the files in stage to the stash.
+
+git stash list: Shows the stash IDs.
+
+git show stashID: Shows the stash info.
+
+git stash show stashID: Shows the files within stash.
+
+git stash apply stashID:SHOWs the stash and doesn't remove it

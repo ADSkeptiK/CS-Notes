@@ -1,0 +1,1 @@
+WINAPI: is a calling convention involving how machine code is generated to place function call args on stack. Most winAPI functions are called by it.

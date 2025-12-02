@@ -1,0 +1,5 @@
+******* Javascript code is inserted between <script></script> tags.*******
+
+*******A JavaScript   function  is a block of JavaScript code, that can be executed when "called" for. *******
+
+*******

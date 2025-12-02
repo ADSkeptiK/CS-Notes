@@ -1,0 +1,28 @@
+********* The .NET Framework Class Library provides many capabilities that you’ll use to buildsubstantial C# apps quickly and easily. It contains thousands of valuable prebuilt classes that have been tested and tuned to maximize performance. You’ll learn how to create your own classes, but you should re-use the .NET Framework classes.60********
+
+******* The .NET Framework Class Library provides many capabilities that you’ll use to build
+substantial C# apps quickly and easily. It contains thousands of valuable prebuilt classes
+that have been tested and tuned to maximize performance. You’ll learn how to create your
+own classes, but you should re-use the .NET Framework classes whenever possible to speed
+up the software-development process, while enhancing the quality and performance of the
+software you develop.60*******
+
+
+******* TheCLR provides various services to managed code, such as • integrating software components written in different .NET languages, • error handling between such components, • enhanced security, • automatic memory management and more.60*******
+
+
+Unmanaged-code programs do not have access to the CLR’s services, which makes unmanaged code more difficult to write.7 Managed code is compiled into machine-specific
+instructions in the following steps: 
+
+1. First, the code is compiled into Microsoft Intermediate Language (MSIL). Codeconverted into MSIL from other languages and sources can be woven together bythe CLR—this allows programmers to work in their preferred .NET programming language. The MSIL for an app’s components is placed into the app’s executable file—the file that causes the computer to perform the app’s tasks. 
+2. When the app executes, another compiler (known as the just-in-time compiler
+or JIT compiler) in the CLR translates the MSIL in the executable file into machine-language code (for a particular platform).
+3. The machine-language code executes on that platform.60
+*******
+
+
+
+******* These classes are organized under namespaces—named collections of related classes.108******
+
+
+******* a class can define several methods that have the same name, as long as they have different numbers and/or types of parameters—a concept known as overloaded methods. These methods normally all perform similar tasks.115*******

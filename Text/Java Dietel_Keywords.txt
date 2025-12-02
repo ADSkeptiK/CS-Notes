@@ -1,0 +1,9 @@
+System.out.print(""): Prints shit without placing the courser at the beginning of the next line.41-42
+
+System.out.printf(""): The good old printf from C.43
+
+%n: Is a portable cross OS line separator that can be used in printf's format specifier string to move courser at the beginning of the next line.44
+
+import: Includs a class.
+
+java.util.Scanner: Is a class used to create an object that can read/input ints and etc from the user.

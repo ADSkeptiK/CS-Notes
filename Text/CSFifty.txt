@@ -1,0 +1,17 @@
+65 is A. 33:00_Week0_Lecture0
+
+We decided to use more bytes to repreasent  characters as a solution for not keeping it limited toEnglish.38:00_Week0_Lecture0
+
+Pixels use RGBs (three bytes to repreasent the color).52:00_Week0_Lecture0
+
+Abstraction: a simplification  so that we wouldn't  have to focus on the lower level. 56:00_Week0_Lecture0
+Algorithm. 1:00:00_Week0_Lecture0.
+
+Green flag in scratch means the start.
+
+
+Cmputers use as many as 32 bits to repreasent  integers. Which is around 4 billion integers.While the highest integer is usually 2 billions because we consider negative numbers as well.
+1:50:48_Week1_Lecture1
+
+Floating point imprecision when we use too many floating digits.
+We use double to improve the precision. 2:26:48_Week1_Lecture1
