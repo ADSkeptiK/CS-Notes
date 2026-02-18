@@ -1,0 +1,52 @@
+******* The general process of compilation regardless of language could be catagorized to the following:
+
+· The Preprocessing: Committing the preprocessor directives.
+
+
+· Compilation to Assembly(Was called the C/C++ Compiler or inner compilation in the book but to avoid confusion I chose to use this name for the stage): Self explanatory.
+
+
+· Compilation to Machine Code(Was called assembly stage in book but replaced for convinience): Self explanatory.
+
+
+· Linker: Self explanatory.12
+
+
+
+******* gcc -E -P filename.c tells the compiler to stop after preprocessing (thru -E flag) and then avoid debugging (thru -P flag) to get a clear image of the processed file.13*******
+
+******* gcc -S  filename.c tells the compiler to to compile the code to x86 Assembly.
+gcc -S  -masm=intel tells it to turn the format to intel and masm (from the default AT&T).14*******
+
+******* The gcc -c filename.c is used to create
+machine code files outta C files.16 ******* 
+
+******* We use cat file.extension to open the file .15
+*******
+
+******* file file.fileextension: Used to get info abt file.15 *******
+
+******* ELF is a file format in Linux that is
+used for saving the compiled object files, the executables,shared libraries.16 *******
+
+
+******* Relocatable files don’t rely on being placed at any particular address in  memory; rather, they can be moved around at will without this breaking any  assumptions in the code. When you see the term relocatable in the file output, you know you’re dealing with an object file and not with an executable.16*******
+
+******* The linker’s job is to take all the object files belonging to a program  and merge them into a single coherent executable, typically intended to  be loaded at a particular memory address. Now that the arrangement of  all modules in the executable is known, the linker can also resolve most  symbolic references. References to libraries may or may not be completely  resolved, depending on the type of library.17*******
+
+
+
+*******  Static libraries (which on Linux typically have the extension .a, as  shown in 
+Figure 1-1) are merged into the binary executable, allowing any  references to them to be resolved entirely. There are also dynamic (shared)  libraries, which are shared in memory among all programs that run on a  system. In other words, rather than copying the library into every binary  that uses it, dynamic libraries are loaded into memory only once, and any  binary that wants to use the library needs to use this shared copy. During the  linking phase, the addresses at which dynamic libraries will reside are not yet  known, so references to them cannot be resolved. Instead, the linker leaves  symbolic references to these libraries even in the final executable, and these  references are not resolved until the binary is actually loaded into memory  to be executed.17 *******
+
+
+******* If we use file command to take info about the fully compiled and linked files,they will be referenced as ELF 64-bit executables and by default, dynamically linked ones. Meaning they use libraries that are not merged into the executable but are instead shared among all programs running on the same system.18*******
+******* When compiling a program compilers emit symbols, which keep track of  symbolic names and record  which binary and data correspond to each symbol. This information is nor mally used by the linker when combining object files (for instance, to resolve function and variable references between modules).18*******
+******* readelf is used to basically translate the ELF files according to  readable text according to it’s standard,file format and what each value in each byte is supposed to mean as an option or section.19*******
+******* In the executable ELF, the functions’ addresses are saved in the value column within .symtab section (and dynsym section for dynamically linked functions), alongside other symbols and their sizes and types.19 *******
+
+******* Symbolic info CAN be emitted as part of the binary or in the form of a separate symbol file and they come in various flavors. The linker only needs the basic symbols, but far more extensive info can be emitted for debugging purposes. Debugging symbols go as far as providing a full mapping between source lines and binary-level instructions, and they even describe function parameters, stack frame information, and more. For ELF binaries, debugging symbols are typically generated in the DWARF format (and embedded within the binary ELF),while PE binaries usually use the proprietary Microsoft Portable Debugging (PDB) format and come in the form of a separate symbol file.19 *******
+******* Binaries don’t always contain the debugging symbols, they may be stripped of them with the very purpose of preventing reverse engineering.20*******
+******* Libraries like libbfd can be could be programmatically used to parse ELF symbols while  the library libdwarf could be used to parse DWARF debug symbols.20 *******
+
+******* 

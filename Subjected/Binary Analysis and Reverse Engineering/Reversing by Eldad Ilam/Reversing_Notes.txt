@@ -1,0 +1,20 @@
+Cryptographic Algorithms: 
+· Restricted: Algorithm is the secret.
+· Key-based: Key is the secret.
+  6
+
+Modules: Largest building blocks for
+program. They are simply binaryies that
+contain isolated areas of program's
+executable. They can be catagorized to 2
+groups.
+
+· Static Libraries: Are added to program
+      during linkage.They become an
+      integrated part.
+
+· Dynamic Libraries: (DLL)s in Windows. They are NOT integrated within program but will still remain a separate part during shipment.It allows to update individual parts without having to recompile the entire thing.28
+
+
+
+

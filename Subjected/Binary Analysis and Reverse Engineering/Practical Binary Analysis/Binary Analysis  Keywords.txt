@@ -1,0 +1,34 @@
+gcc -E -P : Stop after preprocessing,avoid debugging.13
+
+gcc -S  filename.c : Tells the compiler to to compile the code to x86 Assembly.13
+
+gcc -S  -masm=intel: tells gcc to turn the format to intel and masm (from the default AT&T).14
+
+cat file.extension: Used to open file.15
+
+gcc -c filename.c: Used to create obj file of
+the code.156
+
+file file.fileextension: Used to get info abt file.16
+
+LSB: Means it's small endian and stands for Least Significant Byte (Not to be confused with occurances where the LSB stands for Least Significant Bit!).16
+
+
+ELF: Is a file format in Linux that is used for
+saving the compiled object files, the
+executables,shared libraries.16 
+
+Relocation symbols: Specify how function and variable references should be resolved.17
+
+readelf filename.extension : Loads the file as ELF.18
+
+readelf --syms filename.extension: Reads the files symbols section.18
+
+strip –strip-all filename.extension: Strips the executable from debug info.20
+
+
+objdump -sj .rodata filename.elf:
+Basically disassembles the text section of the file.21
+
+
+
