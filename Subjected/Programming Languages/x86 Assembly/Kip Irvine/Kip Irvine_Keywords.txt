@@ -1,0 +1,15 @@
+; : It startsd the one line comments.54
+
+DWORD: Defines 32 bits for the value on left .55
+
+stc :   sets the carry flag.  61
+
+inc: Has one operand and adds 1 to the operand. E.g: inc eax.61
+
+imul: The instruction has three operands in which the first operand is the destination and the following two operands are source operands which are multiplied together.62
+
+
+
+.386 : Identifies the program as a 32 bit one that can access 32 bit registers and addresses.63
+
+

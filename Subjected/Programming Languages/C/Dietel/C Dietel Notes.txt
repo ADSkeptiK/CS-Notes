@@ -1,0 +1,118 @@
+
+*Scope Rules 209*
+
+**** The four identifier scopes are function scope, file scope, block scope and function prototype scope. 209**** 
+
+*Function Scope* 
+
+**** Labels are identifiers followed by a colon such as start: . Labels can be used anywhere in the  function in which they appear but they cannot be referenced outside the function body. Lables are used in switch statements ( as case labels) and in goto statements. Labels are hidden in the function in which they're defined. 209**** 
+
+*File Scope*
+
+**** An identifier defined outside any function has file scope. Such identifier is "known" in all functions  from the point at which the identifier is declared  until the end of the file. Global variables, functions definitions and function prototypes placed 
+outside of a function all have file scope.209**** 
+
+
+*Block Scope*
+
+**** Identifiers defined inside a block all have block scope. Block scope ends at the terminating right brace of the block. Local variables defined at the beginning of the function have block scope as do function parameters which are considered local variables by the function. Any block may contain variable definitions. When blocks are nested and an outer blocks identifier has the same name as an inner block's identifier, the outer block's identifier is hidden until the inner block terminates. While executing in the inner block's identifier, the outer block's identifier is hidden until the inner block terminates.
+For this reason, you generally should avoid variable names that hide names in outer scopes. Local variables with type static will still have block scope, even though they exist before program startup. Thus, storage duration does not affect the scope of an identifier.209****
+
+
+*Function Prototype Scope*
+
+**** The only identifiers with this scope are the identifiers defined in the function' parameter list. Function prototypes do not require names in the parameter list, only types. Identifiers in the function's prototype can be reused elsewhere in the program without ambiguity .209****
+
+*Chapter 6 : Arrays*
+
+******* Arrays are data structures consisting of related data items of the same type. Chapter 10  discusses struct a data structure consisting of  related data items  of possibly different type. Arrays and structs are  "static" entities in that they remain the same size throughout their lifetimes. 244 *******
+
+**** We use the arrays name followed by the element index (Subscripted array name) to assign a value to the element. 245 ****
+
+******* When we define an array, we specify its element type and number of elements so the compiler may reserve the appropriate amount of memory. 246 *******
+
+******* Subscripts start from 0 while the number of array elements Starts from 1. 246 *******
+
+******* Like any other uninitialized variable, arrays elements contain a garbage value at the beginning. 247*******
+
+
+
+
+******* When there are fewer initializers than 
+array elements , the remaining elements are initialized  to 0 and if there are more initializers than the element numbers it'll cause a compilation error. 248*******
+
+******* Omitting the array size, causes the compiler to calculate the arrays number of 
+elements from the number initializers. 248 *******
+
+
+
+
+******* The character arrays are unique. When we initialize a character array with a string literal  there's always an extra string terminating null character and that's the '\0' and a character array should always be defined large enough to hold the string's  number of characters and the terminating null characters. 255 *******
+
+*******  A character string can be initialized as a string like this:
+char b[ ] = "Jesus" 
+or character by character like this : 
+char b [ ] = { 'J' , 'e' , 's' , 'u' , 's' , '\0' }. 255*******
+caller unless it’s absolutely necessary. 263 *******
+
+*Multidimensional Arrays*
+
+******* Arrays can have multiple subscripts. A common use of 
+multidimensional arrays is to represent tables of values consisting of information arranged in rows and columns. To identify a particular table element, we specify two subscripts:  
+• The first (by convention) identifies the element’s row and 
+• the second (by convention) identifies the element’s column.  Arrays that require two subscripts to identify a particular element commonly are
+called two-dimensional arrays.
+Multidimensional arrays can have more
+than two subscripts. 278*******
+
+
+******* An array with m rows and n columns is called an m-by-n array.279*******
+
+*******Referencing a two-dimensional array element as a[x, y] instead of a[x][y] is 
+compiler accesses element 2 of that row. 281 *******
+
+*Chapter 7 : Pointers*
+
+*******Usually, a variable directly
+contains a specific value. A pointer, however, contains the address of another variable that contains a specific value. The pointer points to that variable. 311 *******
+
+******* This definition is read right-to-left, “countPtr is a pointer to int” or “countPtr points to an object1 of type int. 311*******
+
+******* The unary address operator (&) returns the address of its operand.312 *******
+
+
+
+************ When we initialize a pointer with an address, the printf("%p",Ptr); Shows the address of the variable that's being pointed at while the printf("%p",&Ptr); shows the address of the Ptr pointer itself and printf("%d", *Ptr); Shows the value of the variable that the pointer is pointing at.(You apply the unary indirection operator (*), also called the dereferencing operator, to a pointer operand to get the value of the object to which the pointer points). 313 ************
+
+******* Using * in this manner is called dereferencing a pointer. Dereferencing a pointer that has not been initialized with or assigned the address
+of another variable in memory is an error. This could 
+• cause a fatal execution-time error, 
+• accidentally modify important data and allow the program to run to completion with incorrect results, or 
+• lead to a security breach.313 *******
+
+************* To pass values by reference to a function we use the & before the variable name in our function call.316 ************* 
+
+******* The name of an array is the address of its first element and equal to &NameOfTheArray. 319*******
+
+******* On 32 bit systems the poinnter's size is 4 bits while on 64 bit ones it's 8 bytes.328*******
+
+************ When you add an integer to or subtract one from a pointer, the pointer increments or decrements by that integer times the size of the object to which the pointer refers.When performing pointer arithmetic on a character array, the results will be consistent with regular arithmetic because each character is one byte. Type sizes can vary by platform and compiler, so pointer arithmetic is platform- and compiler-dependent. 331***********
+
+*********** If vPtr contains the location 3000 and v2Ptr contains the address 3008, the statement x = v2Ptr - vPtr; assigns to x the number of array elements between vPtr and v2Ptr, in this case, 2 (not 8). Pointer arithmetic is undefined unless performed on elements of the same array. We cannot assume that two variables of the same type are stored side-by-side in memory unless they’re adjacent elements of an array.332 ***********
+
+*********** Pointers of the same type may be assigned to one another. This rule’s exception is a pointer to void (i.e., void *)—a generic pointer that can represent any pointer type. All pointer types can be assigned to a void *, and a void * can be assigned a pointer of any type (including another void *). In both cases, a cast operation is not required. A pointer to void cannot be dereferenced. Consider this: The compiler knows on a machine with four-byte integers that an int * points to four bytes of memory. However, a void * contains a memory location for an unknown type—the precise number of bytes to which the pointer refers is not known by the compiler. The compiler must know the type to determine the number of bytes that represent the referenced value.
+Dereferencing a void * pointer is a syntax error.332 ***********
+
+*********** an compare pointers using equality and relational operators, but such comparisons are meaningful only if the pointers point to elements of the same array; otherwise, such comparisons are logic errors. Pointer comparisons compare the addresses stored in the pointers. Such a comparison could show, for example, that one pointer points to a higher-numbered array element than the other. A common use of pointer comparison is determining whether a pointer is NULL. 333***********
+
+*********** The name of an array is a constant pointer.334***********
+
+*********** We can have an array of pointers pointing at string elements in which case the pointer points at the first character of its string.338***********
+
+*******We can have function pointers pointing to a function or an array of functions. Function pointers can also be included in the parameters list of another function.344-346-347***********
+======================================================================
+
+
+2
+
+

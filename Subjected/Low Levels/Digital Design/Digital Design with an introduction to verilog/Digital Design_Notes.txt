@@ -1,0 +1,19 @@
+***********
+Diminished Radix Complement is:
+ (the highest number possible in each digit of that radix) – Number.
+
+While Radix Complement  is:
+
+(the highest number possible in each digit of that radix) – Number +1.
+
+28*******
+
+
+******* If in M is bigger than N in M-N the radix complement of N + M is destined to produce an extra carry. Cause N + its own radix complement already  does that. 28
+*******
+
+*******  a good explanation on complement based subtraction keep the example 10 - 2 in your mind to help you understand how it works. 30*******
+
+
+
+********** If  in M - N  M>=

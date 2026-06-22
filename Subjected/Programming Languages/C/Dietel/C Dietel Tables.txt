@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For short ints, the minimum range is –32767 to +32767.
+
+For long ints the minimum range is –2147483647 to +2147483647.
+
+An int’s range is greater than or equal to that of a short int and less than or equal to that of a long int. 145
+
+size_t :%zu
+Address: %p 
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+

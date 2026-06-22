@@ -1,0 +1,151 @@
+Keywords
+
+//: Comment.57
+
+#include : A preprocessor directive used for the inclusion of code.57 
+
+/* comment */: Block Comments.57
+
+\n: Escape sequence character for next line 58
+
+\t: Moves courser to tge next horizontal tab stop 58
+
+\a: Produces a sound or visible alert without changing the current courser position 58
+
+\": Double quote in strings 58
+
+printf("%conversion specifier", variablename); : Prints on console.59
+
+scanf("%conversion specifier" , & variablename); : Gets input from the user and puts it in variable.61
+if ( statement = value )
+{  The statements in this block
+ Will happen;
+} : If condition (requirement) that is in parentheses has been met.
+The block or the single function will execute 70
+if ( statement = value )
+{ The statements in this block
+ Will happen;
+}
+else 
+{ 
+statements ;
+} : The else statements will execute if the condition value is false and the requirement has not been met 92
+( Logical Statement ) ?  identifier if condition is met : identifier when condition is false : We use the ternary operator inside other functions first we put the condition followed by ? And then the rest is pretty self explanatory 92 
+
+while ( condition == true )
+{
+The statement happens;
+}
+: The statements in thw body will execute as long as the condition is true 96
+
+++a: First increment the a's value by one and use the incremented value in expression 111
+
+a++: After the expression and giving value is over increment the a 111
+
+(typecast): We use the unary cast operators
+to turn the next operand to the type of variable we want 104
+
+for ( VariableInnitialization; Condition; Incrementation)
+{
+Statement;
+}: We use it for counter controlled iteration and when we know the number of repeatation 137
+
+switch (variable)
+{
+case casevalue :
+statement
+break;
+default:
+statement;
+break;
+}: We use switch and the caselabels to define outcomes for multiple possible values of a variable. Each case represeants a possibility 144
+
+getchar(): Reads a character from the keyboard ignoring the whitespaces 146
+
+EOF: A symbolic integer constant defined in <stdio.h> header (It's usually -1) 146
+
+
+do
+{
+statement;
+}
+while ( condition ) ;: It'll do the statements for at least once before it reaches the condition, if the condition is true it'll happen again 150
+
+break;: Will break out of a loop or switch statement 151
+continue;: Skips the next statements and performs the next iteration of the loop 152
+&&: Logical AND 154
+
+| |: Logical OR 154
+
+!: Negation Operator 155
+
+_Bool: Boolean type can hold only 0 or 1 values. 0 is for false and 1 is for true.
+Assigning a Non Zero value to a boolean sets it to 1. 156
+
+bool: The standard C also includes a bool as a shortened for the _Bool type and true and false as name representations of 1 and 0. During preprocessing bool and true and false are replaced by _Bool, 1 and zero. 156
+
+ReturnValueOfFunction Name(Type Identifier)
+{ 
+statements;
+}:  Function definotion.186
+
+rand(): Generates partly psuedorandom number.198
+
+srand(int identifier): Gets a seed and gives out a different random number fpr each seed. 201
+
+enum identifier { IDENTIFIER , IDENTIFIER2 , IDENTIFIER3 }; :
+A set of integer constants. Values start from 0 from left and are incremented by 1.
+206
+
+enum enumname identifier = enum MemberName; : When we want to add a member to the enum/ define variable equal to one of the member constants
+204
+
+
+auto: Storage duration that is only available for variables. A function's local variables are of type auto by default. 
+Such variables are created when program enters the block in which they're defined.They exist while the block is active and are destroyed when the program exits the block.
+207
+
+extern: For global variables/functions the name of the function exists when the program begins execution and the variable would get initialized only once. 208
+
+static: These identifiers exist from the beginning till the end. For variables in Local static variables, storage is allocated and initialized only once,before the program begins execution. In other words they retain their value. 
+Keywords extern and static have special meaning when explicitly  applied to external identifiers. 208
+
+Datatype ArrayName [ArraySize]; : This is how we define an array. 247
+
+size_t : The C standard say size_t represeants an unsigned integral type and is recommended for any variable represeanting an array's size or subscripts. It is included in the <stddef.h> which is often included by other headers such as <stdio.h>. The conversion specifier  for it is %zu. 247
+
+#define  NAME Value :It is used to create a symbolic constant. A symbolic  constant is an identifier that the C preprocessor replaces with replacement  text before the program is compiled. DO NOT PLACE SEMICOLON AFTER T1HE VALUE, IT WILL CAUSE THE SEMICOLON TO GET PLACED ON INSTEAD OF THE REPLACEMENT TEXT ALONGSIDE THAT VALUE. ALSO ASSIGNING A VALUE TO A SYMBOLIC CONSTANT IN AN EXECUTABLE  IS A COMPILATION  ERROR, SYMBOLIC CONSTANTS ARE NOT VARIABLES. BY CONVENTION  WE USE ONLY UPPERCASE LETTERS FOR THE SYMBOLIC CONSTANTS. 249
+char Name [ ] = "Fuck Multiculturalism!" : Used to initialize the character array with a string literal. 255
+
+FunctionName(int arrayname[]) : Takes an array as input.261
+
+FunctionName(const data) : Value of the  input wont change.264
+
+FunctionNeame(int a[ ] [3]) : This is how we give a multidimensional array as input the first subscript is not necessary.280
+
+DataType *NameOfPointer = &VarName : This is how we define a pointer.312
+
+DataType *NameOfPointer, VarName; :
+Here the Varname is just a variable of the DataType while the *NameOfPointer is a pointer.311
+
+NULL : Is equal to zero in pointers. A pointer with this value is basically pointing at NOTHING  and we write it as NULL when initializing pointers to emphasize that it's actually a pointer not a variable. The value 0 is the only integer value that can be assigned directly to a pointer variable.  312
+
+& : Gives the address of its operand.The operand of & must be a variable; the address operator cannot be applied to literal values (like 27 or 41.5) or expressions.312 - 313
+
+sizeof(): Used to show the bytes of a type or variable. When you use with a pointer, it returns the pointer’s size, not the size of the item to which it points. 328
+
+* (Ptr +  3) : Used to show the value/dereference a pointer to the plus 3ed address. (Pointer offset notation).333
+
+
+
+struct structuretag
+{
+ data_type name;
+data_type name ;
+...//other structure members
+                               }; : use with struct to declare variables of the structure type—e.g., struct card. Variables declared within a struct’s braces are the structure’s members. A struct’s members must have unique names,though separate structure types may contain members of the same name without conflict. Each structure definition ends with a semicolon.483
+===========================================================================
+
+2
+
+

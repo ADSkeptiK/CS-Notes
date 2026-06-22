@@ -1,0 +1,174 @@
+******** The precedence of != is higher than that of = .17 *******
+
+******* An external variable must be defined exactly once, outside of any function while the declaration may be an explicit extern statement or may be an implicit from context.32*******
+
+******* Before a function can use an external variable the name of the variable must be made known to the function.One way to do this is to write an extern declaration in the function; the declaration is the same as before except  for the added keyword extern.33*******
+
+******* A long integer constant is written with a l ir L. Floating-point constants contain a decimal point(1.2) or an exponent (1e-2) or  both ; their type is 
+
+
+double uless suffixed. The suffixes f or F indicate a float constant; l or L indicate a long double.The value of an integer can be specified in octal and hexadecimal instead of decimal. A leading (zero) on an integer constant means octal; a leading 0x or 0X means hexadecimal.37 *******
+
+******* Technically a string constant is an array of characters. The internal representation of a string has a null character '\0' at the end , so the physical storage required is more than the number of characters written between the quotes.38*******
+
+******* All variables must be declared before use, although certain declarations can be made implicitly by context.40 *******
+
+
+
+******* An exolicitly initialized automatic variable is initialized each time the function or block it is in is entered.
+Static and external variables are initialized to zero by default while automatic ones are initialized with a garbage value.40*******
+
+******* The qualifier const can be applied to the definition of any variable to specify that its value will not be changed.For an array the cons qualifier says that the elements will not be altered.40******
+
+******* Arbitrary bit patterns stored in character  variables may appear to be  negative in some machines , yet positive on others.44 *******
+
+******* If arguments are declared by a function prototype as they normally should 
+
+
+be the declaration causes automatic coercion of any arguments when the function is called.45******
+
+******** Source files may be compiled sparately and loaded together , along with previously compiled functions from libraries.67*******
+
+******* If the return type of function is omitted it is assumed an int.70********
+
+******* The value that a function returns will be converted to the return type specified if necessary.70 *******
+
+******* The calling function is free to ignore the returned value.Furthermore there need be no expression after return; in that case, no value is returned to the caller. Control also returns to the caller with no 
+
+
+value when execution "falls off the end" of the function by reaching the closing right brace.70 *******
+
+******* If there is no function prototype,a function is implicitly declared by its first appearance in an expression.Basically if a name that has not been previously declared occurs in an expression and is followed by a left parenthesis it is declared by context to be a function name, the function is assumed to return an int, and nothing is assumed about its arguments.
+Furthermore,if a function declaration does not include arguments, that too is taken to mean that nothin is to be assumed about the arguments.72 *******
+
+******* By default external variables and functions have the property that all references to them by the same name, 
+
+
+even from functions compiled separately are references to the same thing.The standard calls this property external linkage.73 *******
+
+******* A variable is external if it is defined outside of any function.77 *******
+
+
+
+******* The scope of an external variable or a function lasts from the point at which it is declared to the end of the file being compiled.80 *******
+
+******* If an external variable is to be referred to before it is defined, or if it is defined in a different  source file from the one where it is being used then an extern declaration is mandatory.80 *******
+
+
+
+
+
+******* It is important to distinguish between the declaration of an external variable and its definition. A declaration announces the properties of a variable ( primarily its type) ; a defintion  also causes storage to be set aside. 80 *******
+
+******* Array sizes must be specified with the global arrray's definition but are optional with the extern declarations.81 *******
+
+
+******* Header files are defined in page.82 *******
+
+******* The static declaration , applied to an external variable or function, limits the scope of that object to the rest of the 
+
+
+source file being compiled. External static variables thus provide a way to hide the names of global variables in a source file.83 *******
+
+******* If there are fewer initializers than the size of array,the missing elements will be initialized to 0 by default.86*******
+
+******* When a function calls itself reculsively each invocation gets  a fresh set of all the automatic variables,independent of the previous set. 87 *******
+
+******* Recursive code is easier to understand and is especially convenient for recursively defined data structures like trees. 88 *******
+
+******* #include  <filename> searches for 
+
+
+the file based on implementation defined rules while in #include "filename" searching for the file typically begins where the source program was found.88*******
+
+******* Using # in a macro's replacement text would mean the followed parameter is to be regarded as string literal. Using## literally concatenates the preceding token with the following one.91*******
+
+
+******* By definition, the value of a variable or expression of type array is the address
+of element zero of the array.99*******
+
+******* If we initialize a character pointer to a string literal it basically  gives the address of the first character of that literal
+.104*******
+
+
+
+
+*******106*******
+
+
+
+******* In environments that support C you can pass command line arguments to the program when the main is called the first argument which is int argc is the number of parameters
+(set by 1 by default and calculated by the command line environment at first) and argv is the argument vector which is an array of pointers to characters  and has at least one argument (it's 0th cell which is the name of the program).114*******
+
+
+
+37
+
+
+
+
+******** An object is a named region of storage: an lvalue is an expression referring to an object. 197 ********
+
+******* Integral promotion: If  an int  can represent all of the values  of the original type, then the value is converted to unsigned int otherwise it's converted to unsigned int. The process is called integral promotion.197*******
+
+******* Structures can have structure members(objects) within them.129******
+
+******** A struct can be the return value of a function aswell.130 *******
+
+******* Structs are usually included.(Self learned info)*******
+
+
+
+******* struct type can be the return type of a function or its parameter type.*******
+
+******* If a large structure is to be passed to a function it is generally more efficient to pass a pointer than to copy a whole structure.Structure pointers are like pointers to ordinary variables. 131********
+
+******* The structure operators . and -> together with () for function calls and [ ] for subscripts are the top of the precedence hierarchy and thus bind very tightly.132*******
+
+
+******* we can have arrays of structs.133*******
+
+
+
+******* Self Learned:: Use/print or etc of uninitialized struct variables is an error in C*******
+
+******* Self learned:: In order to cast pointers use the following notation:
+(casttype *) pointername
+*******
+
+******* We start typedefs by capital letters to make em standout.146*******
+
+*************** union is basically a single variable that can hold any of the types within it.147*******
+
+till 149
+
+
+
+****************************************************************************************SELF LEARNED EXTREEMLY IMPORTANT!!!:
+EACH ARRAYs POINTER OFFSET  ARITHMETIC  IS BASED ON THE SIZE OF THE TYPE THEY CONTAIN NOT THE THE SPACE THEY ALLOCATE THEMSELVES E.g : a STRING pointer allocates 4 bytes but the individual members of the array are offset by 1 as the type  that the string is containing is a char!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+****************************************************************************************
+
+
+
+
+*******************SELF LEARNED STUFF OUTSIDE OF ELSE BLOCK WILL HAPPEN EITHER WAY*************************
+
+
+
+***********SELF LEARNED, STRING LITERALS FOLLOWED AFTER EACH OTHER WILL BE CONCATANATED.
+e.g: "sda" "sda" == "sdasda"
+
+
+ WE CAN ALSO WRITE A SINGLE STRING LITERAL SPREAD BY A SINGLE FORWARD SLASH EVERYWHERE THE LINE ENDS
+e.g: "sa\
+            sa"
+==
+"sasa"
+"
+**************
+
+
+
+
+
+

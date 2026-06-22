@@ -1,0 +1,2 @@
+Interrupt: Used to inform the device driver that controller has finished its  operation.
+Hardware may trigger an interrupt at any time by sending a signal to the CPU, usually by way of the system bus.8

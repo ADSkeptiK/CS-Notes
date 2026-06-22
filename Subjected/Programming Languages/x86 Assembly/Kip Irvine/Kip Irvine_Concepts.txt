@@ -1,0 +1,201 @@
+
+******* All x86 processors understand a common machine language. 4*******
+
+******* Assembly language is not portable, because it is designed for a specific processor family.4 *******
+
+******* Registers are named storage locations in the CPU that hold intermediate results of operations.4*******
+
+******* Interpretation : As the L1 program is running, each of its instructions could be decoded and executed by a program written in language L0. The L1 program begins running immediately,but each instruction has to be decoded before it can execute. 7*******
+
+
+
+
+
+
+
+
+
+
+
+(assembled) in their entirety into machine language before they begin to execute. 8 *******
+
+******* Each numbering format, or system, has a base, or maximum number of symbols that can be assigned to a single digit. 10********
+
+******* Bits are numbered sequentially starting at zero on the right side and increasing toward the left. The bit on the left is called the most significant bit (MSB), and the bit on the right is the least significant bit (LSB). 10 *******
+
+******* Binary numbers can be signed or unsigned, an unsigned integer is by default positive (Zero is considred positive). When writing down large binary numbers, many people like to insert a dot every 4 bits or 8 
+
+
+bits to make numbers easier to read. 10 *******
+
+******* To translate an unsigned decimal integer into binary, repeatedly divide the integer by 2, saving each remainder as a binary digit till while dividing the quotient  until it gets iterated then we write the numbers from bottom to top and from right to left!!!. 11 *******
+
+*******  In order tgo find how many bits we need to represent a decimal number we use the formula b= ceiling (log2 (n)) *******
+
+******* Binary Addition : When adding two binary integers, proceed bit by bit, starting with the low-order pair of bits (on
+the right) and add each subsequent pair of bits. 12 *******
+
+
+
+
+
+bytes). 13 *******
+******* 
+• One kilobyte is equal to 210, or 1024 bytes.
+• One megabyte (1 MByte) is equal to 220, or 1,048,576 bytes.
+• One gigabyte (1 GByte) is equal to 230, or 10243, or 1,073,741,824 bytes.
+• One terabyte (1 TByte) is equal to 240, or 10244, or 1,099,511,627,776 bytes.
+• One petabyte is equal to 250, or 1,125,899,906,842,624 bytes.
+• One exabyte is equal to 260, or 1,152,921,504,606,846,976 bytes.
+• One zettabyte is equal to 270 bytes.
+• One yottabyte is equal to 280 bytes.13 *******
+
+
+
+
+
+
+
+
+
+******* Signed binary integers are positive or negative. x86 processors, the MSB indicates the sign: 0 is positive and 1 is
+negative. The following figure shows examples of 8-bit negative and positive integers: Table 16.*******
+
+******* Two's complement representation of  an interger is  its additive inverse.
+(If a number is added to its own additive inverse the sum would be zero). In order to get the Two's complement we'll first invert (write the complement) of the numbers in Hexadecimal or Binary and then add 1 to it .16 *******
+******* To convert signed binary to decimal:
+1- If the signed binary is negative  (The 
+
+
+MSB is 1) We'll  first turn it to its positive equivalent  using the two's complement and then turn it to decimal and put a - before it.
+
+2- If the MSB is 0 we just turn it to decimal like an unsinged integer. 17*******
+******* To convert Hexa decimal to decimal:
+
+If the Hexadecimal was negative we first turn it to its two's complement and then turn it to decimal like an unsigned number and then add the - before it.17 ********
+
+******* For obvious reasons (Since the base in Hexadecimal is 16 numbers and we have 4 bits to show each hexadecimal digit ) If the MSB of a Hexadecimal number is >= 8 the number is certainly negative while if it's <=7 it's certainly 
+
+
+positive.17 *******
+
+******* The subtraction in binary is pretty much the same as normal subtraction but we need to remember the 2 base. We can also substract in binary by adding the two complement of the seconde number.19 *******
+
+A brief history of character sets and the UTFs in page 19
+
+
+
+******* A table on the inside back cover of this book lists ASCII codes used when running in Windows Console mode. To find the hexadecimal ASCII code of a character, look along the top row of the table and find the column containing the character you want to translate. The most significant 
+
+
+
+
+
+
+
+
+
+
+
+oscillations per second.34*******
+
+*********** Clock speed is in Hz while clock cycle is in seconds. 34*******
+
+
+******* A machine instruction requires at least one clock cycle to execute, a few  require in excess of 50 clocks ( The multiply instruction on the 8088 processor for example).
+Instructions requiring memory access often have empty clock cycles called wait states because of the differences in the speeds of the CPU, the system bus , and memory circuits.34*******
+
+
+
+
+******* Within the  Instruction execution 
+
+
+cycle.
+
+1. The CPU fetches the instruction  from the instruction queue and immediately  increments the instruction pointer.
+
+2. The CPU decodes the instructions by looking at the bit pattern which might reveal if there are any Operands and operators if there are any.
+
+3. CPU fetches the operands from registers and memory sometimes it involves address calculations.
+
+4. CPU executes the instruction using any operand values it fetched during the earlier step  it also updates a few flags such as the carry,zero and overflow flag.
+
+5. Finally if an output operand was part of
+
+
+
+the instruction, the CPU stores the result of its execution in the operand. 35 *******
+
+******* Computers read memory far slower than they access internal registers because a single value from memory invokes four separate steps:
+
+1- Placing the address of the value you want to read on the address bus.
+
+2- Asserting the value of processors RD (read) pin
+
+3- Waiting one clock cycle for memory chips to respond
+
+4- Copying the data from the data boss to the destination operand.36*******
+
+
+
+
+
+
+
+******* Cache memory is much faster than the conventional  RAM because  it's  constructed from a special type of memory called static RAM. It's expensive  but it does not have to be constantly refreshed in order to keep its content*******
+
+******* The conventional RAM known as dynamic RAM must be refreshed constantly, it's  much slower but cheaper.36 *******
+******* Before a program can run it must be loaded into memory by a utility known as a program loader. After loading, the OS  must point thr CPU to the program's entry point which is the address at which the program is to begin exectution.36*******
+
+******* Process of loading assembly 
+
+
+prohram.The OS searches for the program's  filename in the current disk directory. If it cannot find the name there, it searches a set of predetermined directories. (called Paths). If the program file is found the OS then retrieves basic info about the program's  file from the disk directory such as file size and physical location on disk drive. The OS then determines memory and loads program file size and location  into a table sometimes called a descriptor table. Additionally the OS may adjust the values of pointers within the program so they contain the addresses of  program data. Execution begins execution of the program's first machine instruction (it's entry point.As soon as the program begins running it's  called process.The OS assigns the process an identification number(Process ID) which is used to keep 
+
+
+track of it while running. The process runs by itself. It's the OS's duty to answer its requests.When process ends, it's  removed from memory.37 *******
+
+******* x86 processors have three modes of operation: Protected mode, real address mode and system management  mode. A sub mode, named virtual 8086 mode is a special case of protected mode.37 *******
+
+******* In 32 bit protected mode a task or program can address a linear address space of up to 4GBytes.
+Beginning with the p6 processor a technique called extended physical addressing allows a total of 64 GBytes  of physical memory to be addressed.Real address mode programs  can only address a range of 1MByte. If the processor is in protected mode and running multiple 
+
+
+programs in virtual-8086 mode, each program will have it's own 1MByte memory area.38*******
+
+******** Since registers are high speed registers, we used them to keep the counter of our loops for example.39*******
+
+
+******* There are 8 general purpuse ,registers, six segment registers , a processor status flags (EFLAGS) register and an instruction pointer (EIP).39*******
+
+******** The general purpose registers are used for arithmetic and data movement.39*******
+
+
+
+******* While the x registers can be accessed using both 16 bit and the lower and higher 8 bits of their 16 bits, the remaining general purpose registers can only be acessed using 32 bit and 16 bit names.39 *******
+
+******* Common Register uses:
+EAX: Is automatically used by the multiplication and division instructions. It is often called the extended accumulator register .
+
+ECX: Automatically used by CPU as the loop counter.
+
+ESP: Addresses the data on stack and is rarely used for  ordinary arithmetic  or data transfer. It is often called the extended stack pointer register.
+
+
+
+
+
+
+function parameters.40*******
+
+******* The EIP or extended instruction pointer, register contains  the address of the next instruction to be executed. Certain machine instructions manipulate EIP, causing the program to  branch to a new location.40*******
+
+******* The Eflags registers consists of individual binary bits that control the operation of CPU or reflect the outcome of some CPU operation.40*******
+
+******* A flag is set when it equals to 1 and is cleared/resetted when it equals to 0.40*******
+
+******* Control flags control the CPU’s operation. For example, they can cause the
+CPU to break after every instruction
+
+

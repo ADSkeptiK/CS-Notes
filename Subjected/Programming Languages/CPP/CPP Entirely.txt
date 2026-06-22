@@ -1,0 +1,43 @@
+The CPP Entirely
+LOS: Logic of Syntax
+Classes
+Constructors
+Multiple Constructors
+Depending on how the instantiation happens the according constructor is called in C++.
+Default Constructors
+Copy Constructors
+
+Operator Overload
+ReturnType operator Theoperator(arg1,arg2) Is the format: Arg 1(or its only arg) would be the left arg of the binary arguments. If the  operator overload is defined as member function the first arg will always be defaulted as the type of the parent class, therefore by defining the operator overload as friend function people escape the barrier to have both access to the private members of the class AND define the first parameter.
+User-defined Casts/Conversions
+
+
+
+
+
+
+Conversion Operators
+Their purpose is to provide their user-defined types with userdefined --> fundamental  type casts (they could be used for userdefined --> userdefined casts as well but typically aren’t to respect encapsulation and decrease coupling).
+Logic of syntax: Due to their nature their return types are to always be set as the type they are to be converted to, and logically for their purpose they wouldn’t need more than one sole parameter(which is the object of their type that they want to cast into another type). The reasons mentioned is why the syntax for defining them ALWAYS have them defined as a non static member operator with an undefined return type, and a type name instead of an operator and empty or void parameter list as written below:
+operator typename(void){}
+operator typename(){}
+Due to the clever of implementation of conversion operators and their simple and expectable nature in the language, C++  compilers are pre“smartened” and authorized  to implicitly use such cast operators for type matching (which where their potential is fully used). By using the keyword explicit before their definition, we unauthorize the compiler from implicitly using them.
+Engineering/Coding Perspective: They could save a lot of time.
+Conversion Constructor
+Is used for conversions TO the user defined class that they’re defined in.For conversions to user-defined types this approach is used to respect the encapsulation and decrease coupling.
+Conversion constructors
+For implicit type casting each parameter can only use/call a single  conversion operator/conversion constructor to achieve/reach it’s desired type(when a type ain’t matching it uses either a conversion operator or conversion constructors based on compiler’s “rating” to fix that, It WILL NOT call multiple cast operators.
+Important: Just because it calls a single conversion operator/conversion constructor it DOESN’T MEAN it cant call other cast operators within the  single conversion operator/conversion constructor.
+Explicit
+Since the rule for impli
+- Types of objects and accessibilities (variables,constants,etc)
+- Fundamental types
+- Complex Types(Pointers,Arrays,Userdefined types, Structures)
+- Declarations and definitions
+- Loops , etc , shit
+
+
+
+
+
+

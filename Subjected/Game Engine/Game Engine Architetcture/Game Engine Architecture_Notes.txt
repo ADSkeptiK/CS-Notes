@@ -1,0 +1,53 @@
+****** My personal belief is that STL is all right for use on a PC, be cause its advanced virtual memory system renders the need for careful mem ory allocation a bit less crucial (although one must still be very careful). On a console, with limited or no virtual memory facilities and exorbitant cache miss costs, you’re probably better off writing custom data structures that have predictable and/or limited memory allocation patterns. (And you certainly won’t go far wrong doing the same on a PC game project either.).36******
+
+****** Glide is the 3D graphics SDK for the old Voodoo graphics cards. This SDK was popular prior to the era of hardware transform and lighting (hardware T&L) which began with DirectX 7.
+• OpenGLisawidelyusedportable 3D graphics SDK.
+• DirectX is Microsoft’s 3D graphics SDK and primary rival to OpenGL.
+• libgcm is a low-level direct interface to the PlayStation 3’s RSX graphics hardware, which was provided by Sony as a more efficient alternative to OpenGL. • Edgeis a powerful and highly efficient rendering and animation engine produced by Naughty Dog and Sony for the PlayStation 3 and used by a number of first- and third-party game studios.36
+******
+
+******
+• Havokisapopular industrial-strength physics and collision engine.
+• PhysX is another popular industrial-strength physics and collision en gine, available for free download from NVIDIA.
+• OpenDynamics Engine (ODE) is a well-known open source physics/col lision package.37
+******
+******
+Granny. Rad Game Tools’ popular Granny toolkit includes robust 3D model and animation exporters for all the major 3D modeling and ani mation packages like Maya, 3D Studio MAX, etc., a runtime library for reading and manipulating the exported model and animation data, and a powerful runtime animation system. In my opinion, the Granny SDK has the best-designed and most logical animation API of any I’ve seen, commercial or proprietary, especially its excellent handling of time. • Havok Animation. The line between physics and animation is becoming increasingly blurred as characters become more and more realistic. The company that makes the popular Havok physics SDK decided to create a complimentary animation SDK, which makes bridging the physics animation gap much easier than it ever has been. • Edge. TheEdgelibraryproducedforthePS3bytheICEteamatNaughty Dog, the Tools and Technology group of Sony Computer Entertainment America, and Sony’s Advanced Technology Group in Europe includes a powerful and efficient animation engine and an efficient geometry processing engine for rendering.
+Endorphin and Euphoria. These are animation packages that produce character motion using advanced biomechanical models of realistic hu manmovement.
+37******
+****** By wrapping or replacing the most commonly used standard C library functions, operating system calls and other foundational application programming interfaces (APIs), the platform independence layer ensures consistent behavior across all hardware platforms. This is necessary because there is a good deal of variation across platforms, even among “standardized” libraries like the standard C library.38******
+
+******Assertions are lines of error-checking code that are inserted to catch log ical mistakes and violations of the programmer’s original assumptions. Assertion checks are usually stripped out of the final production build of the game. • Memory management. Virtually every game engine implements its own custom memory allocation system(s) to ensure high-speed allocations and deallocations and to limit the negative effects of memory fragmen tation (see Section 5.2.1.4). • Math library. Games are by their nature highly mathematics-intensive. Assuch, every game engine has at least one, if not many, math libraries. These libraries provide facilities for vector and matrix math, quaternion rotations, trigonometry, geometric operations with lines, rays, spheres, frusta, etc., spline manipulation, numerical integration, solving systems of equations and whatever other facilities the game programmers re quire. • Custom data structures and algorithms. Unless an engine’s designers de cided to rely entirely on a third-party package such as STL, a suite of tools for managing fundamental data structures (linked lists, dynamic arrays, binary trees, hash maps, etc.) and algorithms (search, sort, etc.) is usually required. These are often hand coded to minimize or elimi nate dynamic memory allocation and to ensure optimal runtime perfor mance on the target platform(s).39******
+****** For a PCgameengine, you also need code to integrate your renderer with the Windows message loop. You typically write a “message pump” that ser vices Windows messages when they are pending and otherwise runs your render loop over and over as fast as it can. This ties the game’s keyboard polling loop to the renderer’s screen update loop. This coupling is undesir able, but with some effort it is possible to minimize the dependencies. We’ll explore this topic in more depth later.41******
+****** For very small game worlds, a simple frustum cull (i.e., removing objects that the camera cannot “see”) is probably all that is required. For larger game worlds, a more advanced spatial subdivision data structure might be used to improve rendering efficiency by allowing the potentially visible set (PVS) of objects to be determined very quickly. Spatial subdivisions can take many forms, including a binary space partitioning tree, a quadtree, an octree, a kd tree or a sphere hierarchy. A spatial subdivision is sometimes called a scene graph, although technically the latter is a particular kind of data structure and does not subsumetheformer. Portals or occlusion culling methods might also be applied in this layer of the rendering engine.42******
+****** It is common for a game engine to have an effects system component that manages the specialized rendering needs of particles, decals and other visual effects. The particle and decal systems are usually distinct components of the rendering engine and act as inputs to the low-level renderer. On the other hand, light mapping, environment mapping and shadows are usually han dled internally within the rendering engine proper. Full-screen post effects are either implemented as an integral part of the renderer or as a separate component that operates on the renderer’s output buffers.43******
+******Most games employ some kind of 2D graphics overlaid on the 3D scene for various purposes.These include: HUD, GUI), FMV, IGC.44******
+******Most game engines also incorporate a suite of custom profiling and debugging tools.45******
+
+****** Collision and physics are usually quite tightly coupled. This is because when collisions are detected, they are almost always resolved as part of the physics integration and constraint satisfaction logic.46******
+
+****** Collision and physics are usually quite tightly coupled. This is because when collisions are detected, they are almost always resolved as part of the physics integration and constraint satisfaction logic. A third party SDK is typically integrated into the engine:
+• Havok is the gold standard in the industry today. It is feature-rich and performs well across the boards.
+• PhysX by NVIDIA is another excellent collision and dynamics engine. It was integrated into Unreal Engine 4 and is also available for free as a stand-alone product for PC game development. PhysX was originally designed as the interface to Ageia’s new physics accelerator chip. The SDK is now owned and distributed by NVIDIA, and the company has adapted PhysX to run on its latest GPUs. Open source physics and collision engines are also available. Perhaps the best-known of these is the Open Dynamics Engine (ODE).46
+******
+******
+There are five basic types of animation used in games:
+• sprite/texture animation,
+• rigid bodyhierarchy animation,
+• skeletal animation,
+• vertex animation, and
+• morphtargets.
+Skeletal animation permits a detailed 3D character mesh to be posed by an animator using a relatively simple system of bones. As the bones move, the vertices of the 3D mesh move with them. Although morph targets and vertex animation are used in some engines, skeletal animation is the most prevalent animation methodingamestoday.47******
+
+****** Animation system produces a pose for every bone in the skeleton, and then these poses are passed to the rendering engine as a palette of matrices. The renderer transforms each vertex by the matrix or matrices in the palette, in order to generate a final blended vertex position. This process is known as skinning.48 ******
+******
+The HID engine component is sometimes architected to divorce the low level details of the game controller(s) on a particular hardware platform from the high-level game controls. It massages the raw data coming from the hardware, introducing a dead zone around the center point of each joypad stick, debouncing button-press inputs, detecting button-down and button up events, interpreting and smoothing accelerometer inputs (e.g., from the PlayStation Dualshock controller) and more. It often provides a mechanism allowing the player to customize the mapping between physical controls and logical game functions. It sometimes also includes a system for detecting chords (multiple buttons pressed together), sequences (buttons pressed in se quence within a certain time limit) and gestures (sequences of inputs from the buttons, sticks, accelerometers, etc.).48*******
+
+******
+Naturally audio is an important part of game engine and the API/toolsuites used for it are described in the book.49
+******
+******
+It is interesting to note that going the other way—converting a multiplayer game into a single-player game—is typically trivial. In fact, many game en gines treat single-player mode as a special case of a multiplayer game, in which there happens to be only one player. The Quake engine is well known for its client-on-top-of-server mode, in which a single executable, running on a single PC, acts both as the client and the server in single-player campaigns.50
+******
+****** To bridge the gap between the gameplay code and the low-level engine systems that we’ve discussed thus far, most game engines introduce a layer that I’ll call the gameplay foundations layer (for lack of a standardized name).51
+******
